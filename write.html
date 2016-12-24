@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>document.write</title>
+</head>
+<style type="text/css">
+    #myTd{text-align:center;}
+</style>
+<script type="text/javascript">
+    document.write("<table width='500px' border='1px' align='center' cellspacing='0px'>");
+        for(var i=0;i<9;i++) {
+            var bg ;
+            if(i%2==0) {
+                bg = 'red';
+            } else {
+                bg = 'blue';
+            }
+            document.write("<tr bgcolor="+bg+">");
+            for(var j=0;j<9;j++) {
+//                document.write("<td id='myTd'>"+j+"</td>");//使用了样式
+                document.write("<td align='center'>"+j+"</td>");//没有使用样式，使用了属性：align
+            }
+            document.write("</tr>");
+        }
+    document.write("</table>");
+</script>
+<body>
+
+</body>
+</html>
