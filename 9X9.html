@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js版的九九乘法表</title>
+</head>
+<script type="text/javascript">
+    /*
+    <!-- 使用while start -->
+    var i=1;
+    while (i<=9) {
+        var j=1;
+        while (j<=i) {
+            document.write(i+"x"+j+"="+i*j+"&nbsp;&nbsp;");
+            j++;
+        }
+        document.write("<br />");//换行
+        i++;
+    }
+    <!-- 使用while end -->
+    */
+
+    <!-- 使用for循环 start -->
+    var i;
+    var j;
+    for(i=1;i<=9;i++) {
+        for(j=1;j<=i;j++) {
+            document.write(j+"x"+i+"="+i*j+"&nbsp;&nbsp;");
+        }
+        document.write("<br />");
+    }
+    <!-- 使用for循环 end -->
+</script>
+<body>
+
+</body>
+</html>
