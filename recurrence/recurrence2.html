@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js中的递归调用</title>
+</head>
+<script type="text/javascript">
+    //递归调用：自己调用自己
+    function recurrence(num) {
+        if(num == 1) {
+            return num;
+        } else {
+            return num*recurrence(--num);
+        }
+    }
+
+    alert(recurrence(5));
+</script>
+<body>
+
+</body>
+</html>
