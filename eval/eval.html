@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>eval()的使用</title>
+</head>
+<script type="text/javascript">
+    //eval():将字符串转换成javascript命令执行代码
+//    (eval("var str = '你好！姚明';alert(str)"));
+
+    //eval()在函数里面
+//    function fun() {
+//        eval("var str = '你好，世界！'");
+//        alert(str);
+//    }
+//    fun();
+//    alert(str);
+
+    //window.eval()函数:在火狐下是全局函数，而在IE6下是当前作用域
+//    function fun() {
+//        window.eval("var str = '您好！钱老'");
+//        alert(str);
+//    }
+//    fun();
+//    alert(str);
+    //兼容IE6和火狐等其他的浏览器
+    function fun() {
+        if(window.execScript) {
+            window.execScript("var str = '你好，IE6浏览器！'");
+            alert(str);
+        } else {
+            window.eval("var str = '你好，火狐浏览器！'");
+            alert(str);
+        }
+    }
+
+    fun();
+    alert(str);
+</script>
+<body>
+
+</body>
+</html>
