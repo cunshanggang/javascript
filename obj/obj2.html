@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>创建对象的三种方法</title>
+    <script type="text/javascript">
+        //构造函数方法start
+        //1.声明以后再添加
+//        function fun1() {
+//
+//        }
+//
+//        var obj = new fun1();
+//        obj.name = "cunshanggang";
+//        obj.say = function() {
+//            alert("你好，姚明！");
+//        };
+//        alert(obj.name);
+//        alert(obj.say());//注意，这种访问方法有误
+//        obj.say();
+        //——————————————————————————————————————————
+        //2.声明的同时添加，用到了关键字this
+//        function fun() {
+//            this.name = "yaoMing";
+//            this.say = function () {
+//                alert("你好，我是姚明！");
+//            }
+//        }
+//
+//        var obj = new fun();
+//        alert(obj.name);
+//        obj.say();
+        //构造函数方法end
+        <!-- 2.object方法start-->
+//        var obj = new fun();
+//        function fun() {
+//            this.name = "cunshanggang";
+//            this.say =function () {
+//                alert("你好！姚明");
+//            }
+//        }
+//        document.write(obj.name);
+//        obj.say();
+        <!-- 2.object方法end-->
+        <!-- 3.json方法start-->
+        //1.先声明再添加
+//        var obj = {};
+//        obj.name = "yaoMing";
+//        obj.say = function () {
+//            alert("你好，姚明！");
+//        };
+//        document.write(obj.name);
+//        obj.say();
+        //2.声明的时候添加
+        var obj = {
+            name:"yaoMing",
+            say:function() {
+                alert("你好！姚明");
+            }
+        };
+//        alert(obj.name);
+        obj.say();
+        <!-- 3.json方法end-->
+    </script>
+</head>
+<body>
+</body>
+</html>
