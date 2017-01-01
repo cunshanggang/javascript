@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对象的继承</title>
+    <script type="text/javascript">
+        /*对象的继承
+        * 1.原形继承 protoType
+        *
+        * 2.对象冒充的形式
+        *   a.obj1.fun.call(obj2,[参数...]);
+        *
+        *   b.obj1.fun.apply(obj2,[数组参数]);
+        * */
+        <!-- 原形继承 start -->
+        function Person() {
+            this.name = "姚明";
+            this.say = function () {
+                alert("你好！姚明");
+            }
+        }
+
+        //新建一个对象
+        function Student() {}
+
+        //继承一个对象
+        Student.prototype = new Person();
+
+        //实例化一个对象
+        var yaoMing = new Student();
+
+        //访问一个属性
+//        alert(yaoMing.name);
+
+        //访问一个方法
+        yaoMing.say();
+        <!-- 原形继承 end -->
+    </script>
+</head>
+<body>
+
+</body>
+</html>

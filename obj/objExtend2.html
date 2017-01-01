@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对象的继承-对象冒充的形式apply</title>
+    <script type="text/javascript">
+        /*使用对象冒充的形式，关键字 apply
+        * obj1.fun.apply(obj2,["参数为数组"])
+        * */
+        <!-- start -->
+        //定义一个 “人”对象
+        function Person(name) {//添加了一个参数
+            this.name = name;
+            this.say = function () {
+                alert("你好！"+this.name);
+            }
+        }
+        //定义一个对象
+        function Student() {
+//            window.Person.apply(this,["村上岗"]);//参数形式为数组形式！！！
+            Person.apply(this,["村上岗"]);//去掉window也行
+        }
+
+        //实例化一个对象
+        var yaoMing = new Student();
+        alert(yaoMing.name);
+        yaoMing.say();
+
+
+        <!-- end -->
+    </script>
+</head>
+<body>
+
+</body>
+</html>
