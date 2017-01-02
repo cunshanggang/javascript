@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对象的继承顺序</title>
+    <script type="text/javascript">
+        /*
+        * 对象的继承顺序是从下到上。
+        * */
+        Object.prototype.say = function () {
+            alert("我是顶层函数！");
+        };
+
+        //建立一个对象
+        function Person() {
+//            this.say = function() {
+//                alert("我是父类函数！");
+//            }
+
+        }
+
+        Person.prototype.say = function () {
+          alert("我是父类原型的方法");
+        };
+        //建立一个动作
+        function Study() {
+//            this.say = function() {
+//                alert("我是本身的方法")
+//            }
+
+        }
+
+        //Study继承Person
+        Study.prototype = new Person();
+//        Study.prototype.say = function () {
+//            alert("本身原型的方法");
+//        };
+
+        //实例化对象
+        var yaoMing = new Study();
+        yaoMing.say();
+    </script>
+</head>
+<body>
+
+</body>
+</html>
