@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对象的原生继承</title>
+    <script type="text/javascript">
+        //遍历对象
+        function recurrence() {
+            for(var i in this) {
+                alert(i+"---"+this[i]);
+            }
+
+            //return 1;
+        }
+
+        var obj = {"name":"yaoMing","gender":"male"};
+        Object.prototype.fun = recurrence;// 注意：没有()，recurrence()
+        obj.fun();//BUG:打印的结果连函数体也打印出来了
+
+
+        /*
+        //将对象转换成数组输出
+        function recurrence() {
+            var res = new Array();
+            for(var i in this) {
+                res[i] = this[i];
+            }
+            return res;
+        }
+        var obj = {"0":"yaoMing","1":"male"};//能正确打印出结果,将键值为数字
+//        var obj = {"name":"yaoMing","gender":"male"};//不能正确打印出结果
+        Object.prototype.fun = recurrence;
+        alert(obj.fun());
+        */
+
+        /*
+        //遍历数组的键与值
+        function recurrence() {
+            var res = new Array();
+            for(var i in this) {
+                res[i] = this[i];
+            }
+            return res;
+        }
+        var arr = ["yaoMing","liNa"];
+        Array.prototype.fun = recurrence;
+        alert(arr.fun());
+        */
+    </script>
+</head>
+<body>
+
+</body>
+</html>

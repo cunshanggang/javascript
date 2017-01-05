@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bubble algorithm</title>
+    <script type="text/javascript">
+        //冒泡算法
+        function bubble() {
+            for(var i=0;i<arr.length;i++) {
+
+                for(var j=0;j<arr.length;j++) {
+                    if(arr[j]>arr[j+1]) {
+                        var res = arr[j];
+                        arr[j] = arr[j+1];
+                        arr[j+1] = res;
+                    }
+                }
+            }
+            return arr;
+        }
+
+        //注意：如果数组里面有数字，不能用单引号或双引号，否则会出错
+//        var arr = ['2','9','1','5','11'];
+//        var arr = ["2","9","1","5","11"];
+        var arr = [2,9,1,5,11];
+        Array.prototype.Sort = bubble;// Sort()方法将bubble()的原形继承过来
+        alert(arr.Sort());
+        document.write(arr);
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

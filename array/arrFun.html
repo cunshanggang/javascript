@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>操作数组的几个方法</title>
+    <script type="text/javascript">
+        //三种创建数组的方式
+        //①
+//        var arr = new Array(["yaoMing","liNa","sunYang","zhuTing","yiJianLian"]);
+
+        //②
+//        var arr = new Array();
+//        arr[0] = "yaoMing";
+//        arr[1] = "liNa";
+//        arr[2] = "sunYang";
+//        arr[3] = "zhuTing";
+//        arr[4] = "yiJianLian";
+
+        //③
+        var arr = ["yaoMing","liNa","sunYang","zhuTing","yiJianLian"];
+
+        // 1.push() 往数组后面添加一个元素
+//        arr.push("gaoLin");
+//        alert(arr);
+//        document.write(arr);
+
+        // 2.pop() 删除数组最后一个元素
+
+        /* var arr = new Array(["yaoMing","liNa","sunYang","zhuTing","yiJianLian"]); */
+//        arr.pop();//注：如果数组是上面的创建方式的话，那么就没有输出
+//        alert(arr);
+//        document.write(arr);
+
+        // 3.unshift() 在数组的前面添加一个元素
+//        arr.unshift("gaoLin");
+//        alert(arr);
+//        document.write(arr);
+
+        // 4.shift() 删除数组的第一个元素
+//        arr.shift();
+//        alert(arr);
+//        document.write(arr);
+
+        // 5.slice() 截取数组 该方法会返回一个新的数组
+//        alert(arr.slice(1));
+//        document.write(arr.slice(1));
+
+        // 6.indexOf() 通过数组的值找索引值
+//        alert(arr.indexOf("liNa"));
+//        document.write(arr.indexOf("liNa"));
+
+        // 7.splice() "万能的操作数组的方法" 可以删除和添加数组
+        //删除数组,splice(参数1，参数2)，参数是开始的位置，参数2是要删除的个数
+//        arr.splice(1,2);
+//        alert(arr);
+//        document.writer(arr);
+
+//        //添加数组，splice(参数1，参数2，元素)
+//        arr.splice(1,2,"zhuFangYu","liuXiaoYu");
+//        alert(arr);
+//        document.write(arr);
+
+        // 8.join() 往数组里添加连接符
+//        alert(arr.join("+"));
+//        document.write(arr.join("+"));
+    </script>
+</head>
+<body>
+
+</body>
+</html>
