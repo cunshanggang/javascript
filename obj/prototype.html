@@ -15,7 +15,7 @@
 
         var obj = {"name":"yaoMing","gender":"male"};
         Object.prototype.fun = recurrence;// 注意：没有()，recurrence()
-        obj.fun();//打印的结果连函数体也打印出来了
+        obj.fun();//BUG:打印的结果连函数体也打印出来了
 
 
         /*
