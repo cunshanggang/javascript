@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学生姓名</title>
+    <script type="text/javascript">
+        window.onload = function () {
+            var list = document.getElementsByTagName("li");
+            for(var i=0;i<list.length;i++) {
+                list[i].onclick = function () {
+                    opener.document.getElementById("name").value = this.innerHTML;
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <ul>
+        <li>张三</li>
+        <li>李四</li>
+        <li>王五</li>
+        <li>赵六</li>
+    </ul>
+</body>
+</html>
