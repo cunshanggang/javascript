@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>定时器setInterval()</title>
+    <script type="text/javascript">
+       window.onload =  function() {//当所有的脚本加载完成时才执行事件，如果没有这个，则会报错。
+           var t = setInterval("alert('你好！姚明')",2000);//创建定时器
+           var s = document.getElementById("stop");//没有window.onload方法会显示找不到对象
+           s.onclick = function () {
+               clearInterval(t);//清除定时器
+           }
+       }
+    </script>
+</head>
+<body>
+    <input type="button" id="stop" placeholder="" value="停止">
+</body>
+</html>
