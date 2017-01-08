@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>h1页面</title>
+    <script type="text/javascript">
+        window.onload = function() {
+            var one = document.getElementById("one");
+            var two = document.getElementById("two");
+            var three = document.getElementById("three");
+
+            one.onclick = function () {
+                window.top.frames[2].history.forward();
+            };
+
+            two.onclick = function () {
+                window.top.frames[2].history.back();
+            };
+
+            three.onclick = function () {
+                window.top.frames[2].history.go(0);
+            }
+
+        }
+
+        //注意window.top.frames[2]后面的参数[2]代表第几个框架，从1开始，不是从像数组那样从0开始。
+    </script>
+</head>
+<body>
+    我是顶部
+    <center>
+        <input type="button" value="前进" id="one">
+        <input type="button" value="后退" id="two">
+        <input type="button" value="刷新" id="three">
+    </center>
+
+</body>
+</html>
