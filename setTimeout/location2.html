@@ -7,14 +7,14 @@
         window.onload = function () {
             setTimeout(function () {
                 location.href = "location1.html";
-            },3000);
+            },3000);//3秒实现跳转
 
             var num = document.getElementById("num");
             var nums = 3;
             setInterval(function () {
                 nums--;
                 num.innerHTML = nums;
-            },1000)
+            },1000);//每秒改变数字
         }
     </script>
 </head>
