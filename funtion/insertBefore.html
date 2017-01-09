@@ -9,7 +9,7 @@
                                     //如果不想使用该函数的话，把js代码放到</body>标签后面
             var list = document.getElementById("list"),
                 ref = document.getElementById("python"),
-                haskell = document.createElement("p");
+                haskell = document.createElement("li");
 
             haskell.id = 'haskell';
             haskell.innerText = 'Haskell';
@@ -20,10 +20,10 @@
 
 </head>
 <body>
-    <div id="list">
-        <p id="python">Python</p>
-        <p id="java">Java</p>
-        <p id="php">PHP</p>
-    </div>
+    <ul id="list">
+        <li id="python">Python</li>
+        <li id="java">Java</li>
+        <li id="php">PHP</li>
+    </ul>
 </body>
 </html>
