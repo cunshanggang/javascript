@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>在js中设定样式属性</title>
+    <script type="text/javascript">
+        var d = document.createElement('style');
+        d.setAttribute('type','text/css');
+        d.innerHTML = 'p{color:red;font-size:50px}';
+        document.getElementsByTagName('head')[0].appendChild(d);
+    </script>
+</head>
+<body>
+    <p>你好！李娜</p>
+</body>
+</html>
