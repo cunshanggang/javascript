@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>insertBefore()方法的使用</title>
+    <script type="text/javascript">
+
+        window.onload = function () {//注意：如果没有在页面加载完成之后再进行函数调用，会不显示任何效果！！！
+                                    //如果不想使用该函数的话，把js代码放到</body>标签后面
+            var list = document.getElementById("list"),
+                ref = document.getElementById("python"),
+                haskell = document.createElement("p");
+
+            haskell.id = 'haskell';
+            haskell.innerText = 'Haskell';
+
+            list.insertBefore(haskell,ref);
+        };
+    </script>
+
+</head>
+<body>
+    <div id="list">
+        <p id="python">Python</p>
+        <p id="java">Java</p>
+        <p id="php">PHP</p>
+    </div>
+</body>
+</html>
