@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM下的属性和方法</title>
+    <script type="text/javascript">
+        window.onload = function () {
+            var divs = document.getElementsByTagName("div");
+//            alert(divs.length);
+            //通过下标来访问
+//            alert(divs[0].innerHTML);
+
+            //通过名字name
+            var inputs = document.getElementsByName("userName");
+            var lengths = inputs.length;
+            alert(lengths);
+        };
+
+    </script>
+</head>
+<body>
+    <div id="one">
+        DIV1
+    </div>
+    <div id="two">
+        DIV2
+    </div>
+
+    <input type="text" name="userName" placeholder="">
+    <input type="text" name="userName" placeholder="">
+    <input type="text" name="email" placeholder="">
+</body>
+</html>
