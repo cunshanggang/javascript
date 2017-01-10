@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>getElementsByClassName的使用</title>
+    <script type="text/javascript">
+        //getElementsByClassName()方法的使用
+        //注：该方法在FF是可行的，但在IE会报错！
+        window.onload = function () {
+            //兼容document.getElementsByClassName()在IE和FF中的使用
+            function byClass(className) {
+                if(document.getElementsByClassName) {
+                    return document.getElementsByClassName(className);
+                } else {
+                    var tag = document.getElementsByClassName("*");
+                    var lengths = tag.length;
+                    var divs = [];
+                    for(var i;i<lengths;i++) {
+                        if(tag[i].className == className) {
+                            divs.push(tag[i]);
+                        }
+                    }
+                    return divs;
+                }
+            }
+
+            //访问class里的值
+//            alert(byClass("superStar")[0].innerHTML);
+
+            //访问class的个数
+            alert(byClass("superStar").length);
+        }
+    </script>
+</head>
+<body>
+    <div class="superStar">
+        您好！姚明
+    </div>
+    <div class="superStar">
+        你好！李娜
+    </div>
+</body>
+</html>
