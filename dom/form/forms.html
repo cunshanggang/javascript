@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM下表单的操作</title>
+    <script type="text/javascript">
+        window.onload = function () {
+            var form = document.forms.length;
+//            alert(form);
+            //访问
+            //1. 通过下标[]访问
+//            alert(document.forms[0].name);//myForm1
+
+            //2. 通过name属性访问
+            alert(document.forms['myForm1'].superStar1.value);//姚明
+        }
+    </script>
+</head>
+<body>
+    <form action="" name="myForm1" id="myForm1">
+        <input type="text" name="superStar1" value="姚明" placeholder="">
+        <input type="text" name="superStar2" value="李娜" placeholder="">
+    </form>
+    <hr>
+    <form action="" name="myForm2" id="myForm2">
+        <input type="text" name="superStar3" value="孙杨" placeholder="">
+        <input type="text" name="superStar4" value="张继科" placeholder="">
+    </form>
+</body>
+</html>
