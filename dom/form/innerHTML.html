@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js获取文本内容的方法</title>
+    <script type="text/javascript">
+        //兼容火狐和IE浏览器
+        function getContent(obj,val) {
+            if(document.all) {//只有IE浏览器识别document.all
+                if(val) {
+                    obj.innerText = val;
+                } else {
+                    return obj.innerText;
+                }
+            } else {
+                if(val) {
+                    obj.textContent = val;
+                } else {
+                    return obj.textContent;
+                }
+
+            }
+        }
+        window.onload = function() {
+            /*
+            //为调用函数getContent()
+            var divTop = document.getElementById("top");
+            var divBottom = document.getElementById("bottom");
+            var btn = document.getElementById("btn");
+
+//          alert(divTop.innerHTML);
+//          alert(divTop.innerText);//之前说只兼容IE浏览器，但现在都可以
+//          alert(divTop.textContent);//之前说只兼容FF浏览器，但现在都可以
+            var content = divTop.innerHTML;//获取内容
+            btn.onclick = function() {
+                divBottom.innerHTML = content;
+            }
+            */
+
+            var divTop = document.getElementById("top");
+            var divBottom = document.getElementById("bottom");
+            var btn = document.getElementById("btn");
+
+            btn.onclick = function() {
+                var content = getContent(divTop);//获取内容，输入一个参数的时候
+                getContent(divBottom,content);//调用内容，输入两个参数
+            }
+        };
+    </script>
+</head>
+<body>
+    <div id="top">
+        你好！姚明！
+    </div>
+    <hr>
+    <input type="button" value="↓ ↓" id="btn">
+    <hr>
+    <div id="bottom">
+
+    </div>
+</body>
+</html>
