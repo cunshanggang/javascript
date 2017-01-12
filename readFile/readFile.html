@@ -1,24 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8">
-    <title>js读取本地文件</title>
-    <script type="text/javascript">
-        //window.onload = function() {
-            var fso,ts,s;
-            fso = new ActiveXObject("Scripting.FileSystemObject");
-            ts = fso.OpenTextFile("C:\\Users\\Administrator\\Desktop\\csg\\javascript\\readFile\\information.txt",1);
-            s = ts.Readline();
-        alert(s);
-
-            document.getElementById("container").innerHTML = s;
-            //ts.Close();
-       // }
-    </script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>无标题文档</title>
 </head>
+
 <body>
-    <div id="container">
-11
-    </div>
+<div id="aa"></div>
+
+<script language="javascript">
+    var fso,ts,s='';
+    var ForReading = 1;
+
+    fso = new ActiveXObject("Scripting.FileSystemObject");
+    ts = fso.OpenTextFile("E:\\js\\javascript\\readFile\\information.txt", ForReading);
+    while (!ts.AtEndOfStream)
+    {
+        s = s+ts.ReadLine();
+    }
+    ts.close();
+    document.getElementById("aa").innerHTML=s;
+</script>
+
 </body>
 </html>
