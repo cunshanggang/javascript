@@ -8,15 +8,15 @@
 <body>
 <div id="aa"></div>
 
-<script language="javascript">
+<script charset="utf-8" type="text/javascript">
     var fso,ts,s='';
     var ForReading = 1;
 
     fso = new ActiveXObject("Scripting.FileSystemObject");
-    ts = fso.OpenTextFile("E:\\js\\javascript\\readFile\\information.txt", ForReading);
+    ts = fso.OpenTextFile("C:\\Users\\Administrator\\Desktop\\csg\\javascript\\readFile\\information.txt",ForReading);
     while (!ts.AtEndOfStream)
     {
-        s = s+ts.ReadLine();
+        s = s+ts.ReadLine()+"<br />";
     }
     ts.close();
     document.getElementById("aa").innerHTML=s;
