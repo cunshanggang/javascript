@@ -3,19 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <title>js对表单的操作</title>
+    <script type="text/javascript">
+        window.onload = function() {
+            //1.通过直接定位函数getElementById()直接获取
+            var myForm = document.getElementById("form1").name;
+            //获取form表单的属性：name
+//            alert(myForm.name);//获得是一个对象：ObjectHTMLInputElement
+
+//            var name = document.getElementById("age");
+//            alert(name.name);//输出：age
+
+            //2.通过访问集合的方式
+//            var myForm1 = document.forms["myForm"];
+            var myForm1 = document.forms[0];
+//            alert(myForm1.method);
+
+            //3.通过name属性来获取（只适用于表单form）
+            var myForm2 = document.myForm;
+//            alert(myForm2.name);
+//------------------------------------------------------------------------
+//            var name = document.myForm.length;//表单元素：10
+//            var name = document.myForm[0].value;//zhangSan
+//            var name = document.myForm.name.value;//zhangSan
+//            alert(name);
+            //(3).获取年龄，通过name来获取
+//            var age = document.myForm.age.value;
+//            alert(age);
+            //获取textarea文本域的内容
+//            var introduction = document.myForm.introduction.value;
+//            alert(introduction);
+
+            //获得表单下的name的值，一下的结果：zhangSan
+//           alert(document.getElementById("form1").name.value);
+//           alert(document.forms[0].name.value);//等价于：alert(document.forms[0].elements['name'].value);
+//           alert(document.myForm.name.value);
+
+//------------------------------------------------------------------
+            //1.属性disabled;
+//            var name = document.getElementById("name");
+//            name.disabled = "disabled";//等价于：name.disabled = true;
+
+            //2.通过表单元素找到表单form
+//            var age = document.forms[0].elements["age"].form;
+//            alert(age.id);
+
+            //3.找到焦点：focus();失去焦点：blur();共3种方法
+//            var name = document.getElementById("name");
+//            name.focus();
+
+//            var name = document.forms.myForm.elements["name"].focus();
+            var name = document.forms.myForm.elements.name.focus();
+        }
+    </script>
 </head>
 <body>
-<form action="" name="myForm" id="form1">
-    姓名:<input type="text" name="name" id="name" placeholder="">
+<form action="" id="form1" name="myForm" method="post">
+    姓名:<input type="text" name="name" id="name" value="zhangSan" placeholder="">
     <hr>
-    年龄:<input type="text" name="age" id="age" placeholder="">
+    年龄:<input type="text" name="age" id="age" value="19" placeholder="">
     <hr>
     性别:<input type="radio" name="gender" placeholder="">男
     <input type="radio" name="gender" placeholder="">女
     <hr>
-    爱好:<input type="checkbox" name="play" id="play" placeholder="">玩
-    <input type="checkbox" name="running" id="running" placeholder="">跑步
-    <input type="checkbox" name="study" id="study" placeholder="">学习
+    爱好:<input type="checkbox" name="hobby[]" id="play" placeholder="">玩
+    <input type="checkbox" name="hobby[]" id="running" placeholder="">跑步
+    <input type="checkbox" name="hobby[]" id="study" placeholder="">学习
     <hr>
     毕业院校:<select name="school" id="school">
                 <option selected="selected" value="Peking">北京大学</option>
@@ -25,7 +77,7 @@
     <hr>
     简介:
     <textarea name="introduction" id="introduction" cols="80" rows="10" placeholder="">
-
+        你好！姚明
     </textarea>
     <hr>
     <input type="submit" value="提交">
