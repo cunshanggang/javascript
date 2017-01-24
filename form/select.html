@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js对下拉框的操作</title>
+    <script type="text/javascript">
+        window.onload = function () {
+            var school = document.myForm.school;
+            //选定特定的值
+//            alert(school.length);
+//            school[1].selected = true;//结果：姚明大学
+            //使用selectedIndex
+            school.selectedIndex = 2;
+
+        };
+
+    </script>
+</head>
+<body>
+    <form action="" id="form1" name="myForm" method="post">
+        姓名:<input type="text" name="name" id="name" value="zhangSan" placeholder="">
+        <hr>
+        年龄:<input type="text" name="age" id="age" value="19" placeholder="">
+        <hr>
+        性别:<input type="radio" name="gender" value="male" placeholder="">男
+        <input type="radio" name="gender" value="female" placeholder="">女
+        <hr>
+        爱好:<input type="checkbox" name="hobby[]" id="play" placeholder="">玩
+        <input type="checkbox" name="hobby[]" id="running" placeholder="">跑步
+        <input type="checkbox" name="hobby[]" id="study" placeholder="">学习
+        <hr>
+        毕业院校:<select name="school" id="school">
+                <option selected="selected" value="Peking">村上岗大学</option>
+                <option value="Tsinghua">姚明大学</option>
+                <option value="Zhongshan">郎平大学</option>
+            </select>
+        <hr>
+        简介:
+        <textarea name="introduction" id="introduction" cols="80" rows="10" placeholder="">
+                你好！姚明
+            </textarea>
+        <hr>
+        <input type="submit" value="提交">
+    </form>
+</body>
+</html>
