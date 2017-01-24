@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js对复选框的</title>
+    <script type="text/javascript">
+        window.onload = function () {
+            //显示20个复选框
+            for (var i = 1; i <= 20; i++) {
+                document.write(i + "<input type='checkbox' name='nums'><br />");
+            }
+
+            //显示三个按钮
+            document.write("全选<input type='radio' name='radios'>");
+            document.write("全不选<input type='radio' name='radios'>");
+            document.write("反选<input type='radio' name='radios'>");
+
+            //获取复选框集合
+            var nums = document.getElementsByName("nums");
+            //获取按钮集合
+            var radios = document.getElementsByName("radios");
+
+            /*-------------- 实现全选、全不选和反选的方法1 start --------------------*/
+            /*
+             //实现全选
+             radios[0].onclick = function() {
+             for(var i=0;i<nums.length;i++) {
+             nums[i].checked = true;
+             }
+             };
+
+             //全不选
+             radios[1].onclick = function() {
+             for(var i=0;i<nums.length;i++) {
+             nums[i].checked = false;
+             }
+             };
+
+             //实现反选
+             radios[2].onclick = function() {
+             for(var i=0;i<nums.length;i++) {
+             if(nums[i].checked) {
+             nums[i].checked = false;
+             }else{
+             nums[i].checked = true;
+             }
+             }
+             };
+             */
+            /*-------------- 实现全选、全不选和反选的方法1 end --------------------*/
+
+            /*-------------- 实现全选、全不选和反选的方法2 start --------------------*/
+
+            //该方法引入闭包的概念：在函数里面调用外层的变量
+            /*
+             for(var i=0;i<radios.length;i++) {
+             radios[i].onclick = function() {
+             alert(i);//结果始终是：3
+             }
+             }
+             */
+            /*
+            for (var i = 0; i < radios.length; i++) {
+                    //调用闭包函数
+                    fun(nums, i, radios);
+            }
+            */
+            /*-------------- 实现全选、全不选和反选的方法2 end --------------------*/
+
+            /*-------------- 实现全选、全不选和反选的方法3 start --------------------*/
+            for(var i = 0;i < radios.length; i++) {
+                (function (a){
+                    radios[a].onclick = function () {
+                        //全选：0
+                        if(a == 0) {
+                            for(var i = 0; i < nums.length; i++) {
+                                nums[i].checked = true;
+                            }
+                        }
+
+                        //全不选：1
+                        if(a == 1) {
+                            for(var i = 0;i<nums.length;i++) {
+                                nums[i].checked = false;
+                            }
+                        }
+
+                        //反选：2
+                        if(a == 2) {
+                            for(var i = 0;i<nums.length;i++) {
+                                if(nums[i].checked) {
+                                    nums[i].checked = false;
+                                }else{
+                                    nums[i].checked = true;
+                                }
+                            }
+                        }
+                    }
+                })(i)
+            }
+            /*-------------- 实现全选、全不选和反选的方法3 end --------------------*/
+        };
+
+        //闭包函数参数：nums,i,radios
+        function fun(a, b, c) {
+
+            c[b].onclick = function () {
+                //全选：i=0
+                if (b == 0) {
+                    for (var i = 0; i < a.length; i++) {
+                        a[i].checked = true;
+                    }
+                }
+
+                //全不选：i=1
+                if(b == 1) {
+                    for(var i = 0;i < a.length; i++) {
+                        a[i].checked = false;
+                    }
+                }
+
+                //反选：i=2
+                if(b == 2) {
+                    for(var i = 0;i < a.length; i++) {
+                        if(a[i].checked) {
+                            a[i].checked = false;
+                        }else{
+                            a[i].checked = true;
+                        }
+                    }
+
+                }
+            };
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
