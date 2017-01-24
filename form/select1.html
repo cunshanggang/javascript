@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>下拉框的实例操作</title>
+    <script type="text/javascript">
+       window.onload = function () {
+           var price = document.myForm.price;
+           var nums = document.myForm.nums;
+           var total = document.myForm.total;
+
+           nums.onchange = function () {
+               var n = nums.selectedIndex+1;
+               total.value = n*parseInt(price.value);
+           }
+       }
+    </script>
+</head>
+<body>
+<form name="myForm" action="">
+    价格:<input type="text" name="price" id="price" value="200" placeholder="">
+    数量:<select name="nums" id="nums">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+    </select>
+    总金额:<input type="text" name="total" id="total" value="200">
+</form>
+
+</body>
+</html>
