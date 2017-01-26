@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对字数的统计</title>
+    <script type="text/javascript">
+        window.onload = function() {
+            //获取内容
+            var con = document.myForm.content;
+            var warm = document.getElementById("warm");
+
+            con.onkeyup = con.onkeydown = function () {
+                var nowLen;
+                var leaveLen;
+                var str = con.value;
+                //alert(str);
+                nowLen = check(str);
+                //alert(nowLen);
+                var len = 20;
+                leaveLen = len - nowLen;
+                if(nowLen>20) {
+                    con.value = str.substr(0,len);
+                    leaveLen = 0;
+                }
+                warm.innerHTML="允许输入"+len+"个字，已经输入了"+nowLen+"个，还剩下"+leaveLen+"个";
+            };
+
+            //判断是中文还是英文
+            function check(str) {
+                var num = 0;
+                for(var i=0;i<str.length;i++) {
+                    if(str.charCodeAt(i)>=0 && str.charCodeAt(i)<=255) {
+                        num++;
+                    } else {
+                        num = num+2;
+                    }
+                }
+                return num;
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <div id="warm">
+        允许输入20个字，已经输入了0个，还剩下20个
+    </div>
+    <form action="" id="myForm" name="myForm">
+        <textarea name="content" id="content" placeholder="" cols="30" rows="10"></textarea>
+    </form>
+</body>
+</html>
