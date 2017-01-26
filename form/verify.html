@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对表单的验证</title>
+    <script type="text/javascript">
+        function check(obj) {
+            //判断名字不能为空
+            if(obj.names.value == '') {
+                alert("名字不能为空!");
+                return false;
+            }
+
+            //判断年龄不能为空
+            if(obj.age.value == '') {
+                alert("年龄不能为空");
+                return false;
+            }
+
+            //判断性别是否选择
+            var status=0;
+            for(var i=0;i<obj.gender.length;i++) {
+                if(obj.gender[i].checked) {
+                    status = 1;
+                }
+            }
+            if(!status) {
+                alert("性别不能为空！");
+                return false;
+            }
+        }
+
+        //此处不带window.onload = function() {};
+        //return check(this)：阻止时间的默认行为
+    </script>
+</head>
+<body>
+<form action="" id="form1" name="myForm" method="post" onsubmit="return check(this)">
+    姓名:<input type="text" name="names" id="name" value="" placeholder="">
+    <hr>
+    年龄:<input type="text" name="age" id="age" value="" placeholder="">
+    <hr>
+    性别:<input type="radio" name="gender" placeholder="">男
+    <input type="radio" name="gender" placeholder="">女
+    <hr>
+    爱好:<input type="checkbox" name="hobby[]" id="play" placeholder="">玩
+    <input type="checkbox" name="hobby[]" id="running" placeholder="">跑步
+    <input type="checkbox" name="hobby[]" id="study" placeholder="">学习
+    <hr>
+    毕业院校:<select name="school" id="school">
+            <option selected="selected" value="Peking">村上岗大学</option>
+            <option value="Tsinghua">姚明大学</option>
+            <option value="Zhongshan">郎平大学</option>
+        </select>
+    <hr>
+    简介:
+    <textarea name="introduction" id="introduction" cols="80" rows="10" placeholder="">
+        你好！姚明
+    </textarea>
+    <hr>
+    <input type="submit" value="提交">
+</form>
+</body>
+</html>
