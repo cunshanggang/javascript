@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>定时跳转</title>
+    <script type="text/javascript">
+        window.onload=function  () {
+            var subs=document.myform.subs;
+            subs.onclick=function  () {
+                document.myform.action="1.html";
+                document.myform.submit();
+            };
+
+            setTimeout(function  () {
+                document.myform.action="2.html";
+                document.myform.submit();
+            },4000)
+        }
+    </script>
+</head>
+<body>
+<form name="myform" action="" method="post">
+    <input type="text" name="names">
+    <input type="button" value="提交" name="subs">
+    <input type="button" value="删除" name="subs">
+    <input type="button" value="修改" name="subs">
+</form>
+</body>
+</html>
