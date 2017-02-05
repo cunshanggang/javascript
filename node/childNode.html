@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>节点的操作</title>
+    <style type="text/css">
+        .one{width:400px;border:1px dotted red;}
+        .two{width:200px;height:120px;background-color:gray;margin:30px;}
+         span{width:10px;height:90px;background-color:orange;margin:20px;}
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+//            var outdiv = document.getElementById("outdiv");
+//            alert(outdiv);
+//            var children = outdiv.childNodes;
+//            alert(children.length);
+            //文档的节点
+//            alert(document.nodeType);
+//            alert(document.nodeName);
+//            alert(document.nodeValue);
+
+            //
+//            alert(document.comments);
+            //for(var i=0;children.length;i++) {
+//                alert(children[i].nodeType);
+//                alert(children[i].nodeName);
+//                alert(children[i].nodeValue);
+
+           // }
+
+            //-------------------------------------------
+            //父节点
+//            var innerdiv = document.getElementById("innerdiv");
+//            var father = innerdiv.parentNode;
+//            alert(father.nodeName);
+
+            //最后一个子节点
+//            var innerdiv = document.getElementById("innerdiv");
+//            var last = innerdiv.lastChild;
+//            alert(last.nodeType);
+            
+            //兼容最后一个节点
+            function last(obj) {
+                var last = obj.lastChild;
+                while (last.nodeType == 3) {
+                    last = last.previousSibling;
+                }
+                return last;
+            }
+
+            var innerdiv = document.getElementById("innerdiv");
+//            alert(last(innerdiv).nodeType);
+
+            function getChildren(obj) {
+                var children = obj.childNodes;
+                var arr = [];
+
+                for(var i=0;i<children.length;i++) {
+                    if(children[i].nodeType == 3 && /^\s+$/.test(children[i].nodeValue)) {
+                        continue;
+                    } else {
+                        arr.push(children[i]);
+                    }
+                }
+                return arr;
+            }
+
+            var outdiv = document.getElementById("outdiv");
+            alert(getChildren(outdiv).length);
+        }
+    </script>
+</head>
+<body>
+<div id="outdiv" class="one">
+    我是外层的Div
+    <p class="two">我是P标签</p>
+    <div id="innerdiv" class="two">
+        <span>
+            我是内层的Div的标签span
+        </span>
+    </div>
+    <!--我是注释，你好，姚明！-->
+    <h3 class="two">
+        我是h3标签
+    </h3>
+    <u class="two">我是下划线</u>
+</div>
+</body>
+</html>
