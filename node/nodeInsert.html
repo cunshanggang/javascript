@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>节点的增删改查</title>
+    <style type="text/css">
+        .one{width:300px;height:600px;border:4px dotted #f9dd34;}
+        .two{width:200px;height:400px;border:1px solid #0b77b7;}
+    </style>
+    <script type="text/javascript">
+        //节点的增、删、改、查
+        window.onload = function() {
+            var eleA = document.createElement("a");
+            eleA.href = "http://baidu.com";
+            eleA.title = "百度一下，你就知道了！";
+            eleA.innerHTML = "百度";
+            eleA.style.color = "red";
+
+//            document.body.appendChild(eleA);
+//            var outDiv = document.getElementById("outDiv");
+//            outDiv.appendChild(eleA);
+
+            //插入一个标签元素
+            var innerDiv = document.getElementById("innerDiv");
+            var spans = innerDiv.firstChild;//规定第一个元素
+            var eleH3 = document.createElement("h3");
+            var h3Text = document.createTextNode("你好！李娜");
+                eleH3.appendChild(h3Text);
+                innerDiv.insertBefore(eleH3,spans);
+
+            //代替一个元素
+            var eleP = document.createElement("p");
+            eleP.innerHTML = "我是P标签";
+            innerDiv.replaceChild(eleP,eleH3);
+
+            //删除一个标签元素
+            innerDiv.removeChild(eleP);
+            eleP = null;
+            alert(eleP.innerHTML);
+
+        }
+
+    </script>
+</head>
+<body>
+    <div id="outDiv" class="one">
+        我是外层div
+        <h1>你好，姚明</h1>
+        <div id="innerDiv" class="two">
+            我是里面的div
+        </div>
+    </div>
+</body>
+</html>
