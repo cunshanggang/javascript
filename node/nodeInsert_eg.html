@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>节点的增、删、改、查的应用</title>
+    <script type="text/javascript">
+        window.onload = function () {
+            //鼠标点击按钮跳出登录框
+            var btn = document.getElementById("btn");
+            btn.onclick = function() {
+                divs = document.createElement("div");
+                divs.style.width = "500px";
+                divs.style.height = "300px";
+                divs.style.border = "5px solid blue";
+                divs.style.position = "absolute";
+                divs.style.top = "100px";
+                divs.style.left = "260px";
+                document.body.appendChild(divs);
+
+                //鼠标点击登录框消失
+                var innerBtn = document.createElement("a");
+                innerBtn.innerHTML = "X";
+                innerBtn.style.styleFloat = "right";
+                divs.appendChild(innerBtn);
+
+                innerBtn.onclick = function() {
+                    document.body.removeChild(divs);
+                    //删除时记得滞空变量，释放内存
+                    divs = null;
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="登录" id="btn">
+</body>
+</html>
