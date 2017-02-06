@@ -10,7 +10,7 @@
     <script type="text/javascript">
         window.onload = function() {
             //获得类元素
-            function byclass(className) {
+            function byClass(className) {
                 if(document.getElementsByClassName) {
                     return document.getElementsByClassName(className);
                 } else {
@@ -27,31 +27,55 @@
                 }
             }
 
-            var lists = byclass("one");
-            alert(lists.length);
+//            var lists = byClass("one");
+//            alert(lists.length);
+
+            //获取li同胞元素
+            function nextNode(obj) {
+                var nextLi = obj.nextSibling;
+                while(nextLi.nodeType == 3) {
+                    nextLi = nextLi.nextSibling;
+                }
+
+                return nextLi;
+            }
+
+            //遍历隐藏li元素
+            var lists = byClass("one");
+
+            for(var i=0;i<lists.length;i++) {
+                lists[i].onclick = function() {
+                    if(nextNode(this).style.display == "") {
+                       nextNode(this).style.display = "none";//为空就隐藏，注意用于鼠标点击时产生效果
+                    } else {
+                        nextNode(this).style.display = "";//否则就显示
+                    }
+                }
+            }
+
         }
     </script>
 </head>
 <body>
 <ul>
-    <li class="one">
-        第一
+    <li class="one">第一</li>
+    <li>
         <ul>
             <li>第一项</li>
             <li>第二项</li>
             <li>第三项</li>
         </ul>
     </li>
-    <li class="one">
-        第二
+    <li class="one">第二</li>
+    <li>
         <ul>
             <li>第一项</li>
             <li>第二项</li>
             <li>第三项</li>
         </ul>
     </li>
-    <li class="one">
-        第三
+    <li class="one">第三</li>
+    <li>
         <ul>
             <li>第一项</li>
             <li>第二项</li>
