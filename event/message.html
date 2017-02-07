@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>留言板</title>
+    <style type="text/css">
+        .list-item{border-bottom:1px solid red;color:blue;}
+    </style>
+    <script type="text/javascript">
+        window.onload = function() {
+           var container = document.getElementById("container");
+           var texts = document.myForm.texts;
+           var btn = document.myForm.btn;
+            btn.onclick = texts.onkeydown = function(e) {
+                var ev = e || window.event;
+                if(ev.type == "click" || (ev.type=="keydown" && ev.keyCode==13 && ev.ctrlKey==true)) {//判断是否为ctrl+enter
+                    var elep = document.createElement("p");//创建节点
+                    elep.innerHTML = texts.value;//赋值给新的节点
+                    elep.className = "list-item";//创建节点后添加一个类
+                    container.appendChild(elep);
+                    texts.value = "";//将内容滞空
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="container">
+        <h3>留言记录</h3>
+        <hr>
+        <p class="list-item">你好</p>
+    </div>
+    <form action="" name="myForm">
+        <textarea name="texts" id="" cols="50" rows="10" placeholder=""></textarea>
+        <input type="button" value="提交" id="btn">
+    </form>
+</body>
+</html>
