@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>39.事件流2</title>
+    <style type="text/css">
+        #outDiv{width:500px;height:300px;border:1px solid red;padding:40px;}
+        #innerDiv{width:300px;height:100px;border:1px solid blue;}
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            var outDiv = document.getElementById("outDiv");
+            var innerDiv = document.getElementById("innerDiv");
+
+            outDiv.addEventListener("click",function(e){
+                alert(this.id);
+//                e.stopPropagation();//防止冒泡事件
+            },true);
+
+            innerDiv.addEventListener("click",function(){
+                alert(this.id);
+            },true)
+        }
+
+    </script>
+</head>
+<body>
+<div id="outDiv">
+    <div id="innerDiv"></div>
+</div>
+</body>
+</html>
