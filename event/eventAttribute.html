@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件的属性</title>
+    <style type="text/css">
+        #container{width:500px;height:200px;border:1px solid red;}
+    </style>
+    <script type="text/javascript">
+        window.onload = function(e) {
+//            alert(window.event);
+//            alert(e);
+            //-----------------------------------------------
+//            document.onmouseover = function (e) {
+//                var ev = window.event || e;
+//                var x = ev.clientX;
+//                var y = ev.clientY;
+//                var sx = ev.screenX;
+//                var sy = ev.screenY;
+//
+//                var container = document.getElementById("container");
+//                container.innerHTML="x轴:  "+x+"y轴:  "+y+"<br />"+"screenX:  "+sx+"screenY:  "+sy;
+//            }
+
+            //------------------------------------------------
+//            var container = document.getElementById("container");
+//            document.onclick = function(e) {
+//                var ev = window.event || e;
+//                var ox = ev.offsetX || ev.layerX;
+//                var oy = ev.offsetY || ev.layerY;
+//                container.innerHTML = "ox:  "+ox+"<br />"+"oy:  "+oy;
+//            }
+
+            //------------------------------------------------
+            //按下键盘出现对应的编码
+            document.body.onkeydown = function(e) {
+                var ev = e || window.event;
+                alert(ev.keyCode);
+                alert(ev.altKey);
+                alert(ev.type);
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="container">
+
+    </div>
+</body>
+</html>
