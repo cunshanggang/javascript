@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>37.事件的基础与事件的绑定</title>
+    <script type="text/javascript">
+        window.onload = function() {
+            //-----------------火狐------------------
+            /*
+            var btn = document.getElementById("btn");
+            btn.addEventListener("click",fun1,false);
+            btn.addEventListener("click",fun2,false);
+            btn.addEventListener("click",function() {alert("fun3")},false);
+            //删除事件
+            btn.removeEventListener("click",function() {alert("deleteFun3");},false);
+            */
+
+            //-----------------IE--------------------
+            /*
+            var btn = document.getElementById("btn");
+            btn.attachEvent("onclick",fun1,false);
+            btn.attachEvent("onclick",fun2,false);
+            btn.attachEvent("onclick",function() {alert("fun3")},false);
+            //删除事件
+            btn.detachEvent("onclick",function() {alert("deleteFun3")},false);
+            */
+
+            function fun1() {
+                alert("fun1");
+            }
+
+            function fun2() {
+                alert("fun2");
+            }
+
+            //兼容IE与FF
+            function IEFF(obj,types,fns) {
+                if(document.all) {//如果IE浏览器能识别document.all
+                    return obj.attachEvent("onclick",fns);
+                } else {
+                    return obj.addEventListener("click",fns,false);
+                }
+            }
+
+            var btn = document.getElementById("btn");
+            IEFF(btn,click,fun1);
+
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="改变" id="btn">
+</body>
+</html>

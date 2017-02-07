@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>节点的增、删、改、查的应用</title>
+    <title>36.节点的增、删、改、查的应用</title>
     <script type="text/javascript">
         window.onload = function () {
             //鼠标点击按钮跳出登录框
@@ -15,6 +15,7 @@
                 divs.style.position = "absolute";
                 divs.style.top = "100px";
                 divs.style.left = "260px";
+                //将div插入到body里面
                 document.body.appendChild(divs);
 
                 //鼠标点击登录框消失
@@ -25,7 +26,7 @@
 
                 innerBtn.onclick = function() {
                     document.body.removeChild(divs);
-                    //删除时记得滞空变量，释放内存
+                    //注意：删除时滞空变量，释放内存
                     divs = null;
                 }
             }
