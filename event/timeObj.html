@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>时间对象的应用</title>
+    <style type="text/css">
+        span{color:red;font-size:60px;}
+    </style>
+    <script type="text/javascript">
+        function getCha (now,end) {
+            var arr = [];
+            var cha = (end.getTime() - now.getTime())/1000;
+            var days = parseInt(cha/(60*60*24));
+            arr.push(days);
+                cha %= (60*60*24);
+            var hours = parseInt(cha/(60*60));
+            arr.push(hours);
+                cha %= 60*60;
+            var mints=parseInt(cha/60);
+            arr.push(mints);
+            var sends = cha % 60;
+            arr.push(sends);
+
+            return arr;
+        }
+
+        window.onload=function () {
+            var spans = document.getElementsByTagName("span");
+            var end = new Date();
+
+            end.setFullYear(2020);
+            end.setMonth(7);
+            end.setDate(24);
+            end.setHours(12);
+            end.setMinutes(0);
+            end.setSeconds(0);
+
+            var now = new Date();
+            for(var i=0;i<getCha (now,end).length;i++) {
+                spans[i].innerHTML = getCha (now,end)[i];
+            }
+
+            setInterval(function () {
+                var now = new Date();
+                for(var i=0;i<getCha (now,end).length;i++) {
+                    spans[i].innerHTML = getCha (now,end)[i];
+                }
+            },1000)
+        }
+    </script>
+</head>
+<body>
+    <div>
+        距离东京奥运会还有<span></span>天<span></span>小时<span></span>分钟<span></span>秒
+    </div>
+</body>
+</html>
