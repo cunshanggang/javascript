@@ -28,7 +28,7 @@
                 //设定文本的类型:text
                 inputs.type = "text";
                 //设定文本框的长度
-                inputs.style.width = tdObj.offsetWidth - 15+"px";
+                inputs.style.width = tdObj.offsetWidth-15+"px";
                 //去掉文本框的边框
                 inputs.style.borderWidth = "0px";
                 //在对象tab>td里插入文本框
@@ -40,17 +40,18 @@
 
                 //当鼠标的焦点离开，鼠标双击，键盘有按下
                 inputs.onblur = inputs.ondblclick = inputs.onkeydown = function(e) {
-                    var ev = e || event.window;
-                    if(ev.type == "onblur" || ev.type == "ondblclick" || (ev.type == "keydown" && ev.keyCode ==13)) {
+                    var ev = e || window.event;
+                    if(ev.type == "blur" || ev.type == "dblclick" || (ev.type == "keydown" && ev.keyCode ==13)) {
                         //获取当前文本框的值
                         var val = this.value;
                         //将文本框移除
                         tdObj.removeChild(inputs);
                         if(val == "") {
                             //如果值为空，则为原来的值
-                            tbObj.innerHTML = tdText;
-                        }else{//否则重新赋值
-                            tbObj.innerHTML = val;
+                            tdObj.innerHTML = tdText;
+                        }else{
+                            //否则重新赋值
+                            tdObj.innerHTML = val;
                         }
                     }
                 }
@@ -60,14 +61,14 @@
 </head>
 <body>
 <center>
-    <table id="tab" width="600px" border="1px" bordercolor="#aaa" cellpadding="5px" cellspacing="0px">
+    <table id="tab" width="600px" border="1px" bordercolor="#aaaaaa" cellpadding="5px" cellspacing="0px">
         <caption>学生成绩单</caption>
         <tr>
-            <th>姓名</th>
-            <th>性别</th>
-            <th>班别</th>
-            <th>科目</th>
-            <th>分数</th>
+            <th width="20%">姓名</th>
+            <th width="20%">性别</th>
+            <th width="20%">班别</th>
+            <th width="20%">科目</th>
+            <th width="20%">分数</th>
         </tr>
         <tr>
             <td>姚明</td>
