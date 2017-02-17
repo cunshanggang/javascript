@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>鼠标点击按钮改变颜色</title>
+    <style type="text/css">
+        .active{background:yellow;}
+        div{width:400px;height:100px;border:1px solid #ccc;display:none;}
+    </style>
+    <script type="text/javascript">
+        window.onload = function() {
+            var aBtn = document.getElementsByTagName("input");
+            var aDiv = document.getElementsByTagName("div");
+
+            //循环出按钮，分两层
+            for(var i=0;i<aBtn.length;i++) {
+                //给每一个按钮添加一个索引值
+                aBtn[i].index = i;
+                aBtn[i].onclick = function() {
+                    //点击之后，先把所有的按钮变为非选定
+                    for(var i=0;i<aBtn.length;i++) {
+                        aBtn[i].className = '';
+                        aDiv[i].style.display = "";
+                    }
+                    //点击那个选定那个
+                    this.className = 'active';
+                    aDiv[this.index].style.display = 'block';
+                };
+            }
+        }
+    </script>
+</head>
+<body>
+    <input class="active" type="button" value="1">
+    <input type="button" value="2">
+    <input type="button" value="3">
+    <div style="display:block;">111</div>
+    <div>222</div>
+    <div>333</div>
+</body>
+</html>
