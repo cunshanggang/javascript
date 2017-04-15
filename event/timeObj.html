@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>时间对象的应用</title>
+    <title>40.时间对象的应用</title>
     <style type="text/css">
         span{color:red;font-size:60px;}
     </style>
     <script type="text/javascript">
-        function getCha (now,end) {
+        function getCha(now,end) {
             var arr = [];
             var cha = (end.getTime() - now.getTime())/1000;
             var days = parseInt(cha/(60*60*24));
@@ -36,14 +36,14 @@
             end.setSeconds(0);
 
             var now = new Date();
-            for(var i=0;i<getCha (now,end).length;i++) {
-                spans[i].innerHTML = getCha (now,end)[i];
+            for(var i=0;i<getCha(now,end).length;i++) {
+                spans[i].innerHTML = getCha(now,end)[i];
             }
 
             setInterval(function () {
                 var now = new Date();
-                for(var i=0;i<getCha (now,end).length;i++) {
-                    spans[i].innerHTML = getCha (now,end)[i];
+                for(var i=0;i<getCha(now,end).length;i++) {
+                    spans[i].innerHTML = getCha(now,end)[i];
                 }
             },1000)
         }

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>option的操作</title>
+    <script type="text/javascript">
+        window.onload = function() {
+            var boxes = document.getElementById("item");
+            boxes.style.display = "none";
+            var opts = document.getElementById("mySelect");
+
+            //监控option的选项
+            opts.onchange = function() {
+                if(opts.options[1].selected == true) {
+                    boxes.style.display = "";
+                }else{
+                    boxes.style.display = "none";
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="" name="" method="post">
+        <select name="" id="mySelect">
+            <option value="0">体育明星</option>
+            <option value="1">IT大佬</option>
+            <option value="2">商业奇才</option>
+            <option value="3">影视歌手</option>
+        </select>
+        <div id="item">
+            <input type="checkbox" name="" id="1">姚明
+            <input type="checkbox" name="" id="2">刘翔
+            <input type="checkbox" name="" id="3">李娜
+        </div>
+    </form>
+</body>
+</html>
