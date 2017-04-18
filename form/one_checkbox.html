@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选择一个复选框</title>
+</head>
+<script type="text/javascript">
+//    function chewww_zzjs_netValidate(cb) {
+//        for (j = 0; j < 8; j++) {
+//            if (eval("document.zzjs_net.www_zzjs_net[" + j + "].checked") == true) {
+//                document.zzjs_net.www_zzjs_net[j].checked = false;
+//                if (j == cb) {
+//                    document.zzjs_net.www_zzjs_net[j].checked = true;
+//                }
+//            }
+//        }
+//    }
+
+    window.onload = function() {
+//        var boxes = document.getElementsByName("aaa");
+//        alert(boxes);
+//        alert(boxes.length);
+        var yes = document.getElementById("yes");
+        var no = document.getElementById("no");
+//        boxes.onclik = function() {
+//            if() {
+//
+//            }
+//            alert("ddddddd");
+//        }
+//        if(yes.checked) {
+//            no.checked = false;
+//        }
+//        if(no.checked) {
+//            yes.checked = false;
+//        }
+        yes.onclick = function() {
+            alert('dddddddd');
+        }
+
+    }
+</script>
+<body>
+    <form>
+        <div align="center" id="boxes">
+            是
+            <input type="checkBox" name="aaa" id="yes">
+            <br>
+            否
+            <input type="checkBox" name="aaa" id="no">
+        </div>
+    </form>
+</body>
+</html>

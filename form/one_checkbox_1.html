@@ -1,0 +1,68 @@
+<html>
+<head>
+    <meta http-equiv="content-Type" content="text/html;charset=utf-8">
+    <meta name="keywords" content="111" />
+    <meta name="description" content="222" />
+    <title>网页特效 只能单选的复选框 </title>
+    <script>
+
+        window.onload = function() {
+            var boxes = document.getElementsByName('box');
+            //boxes[1].checked = true;
+            //alert(boxes.length);
+            var myBox = document.getElementById("myBox");
+//                for(var k=0;k<8;k++) {
+//                    boxes[k].checked = true;
+//                }
+            myBox.onclick = function() {
+//                var cb = boxes.checked.index;
+//                alert("ddddddd");
+//                alert(cb);
+//                alert("ddddddd");
+//               myBox.boxes["1"].checked;
+//                for(var k=0;k<8;k++) {
+//                    boxes[k].checked =false;
+//                }
+                var i;//alert(555);
+                for (var j = 0; j < 8; j++) {
+//                    boxes[i].checked = false;
+                    if (boxes[j].checked == true) {
+                        i = j;
+                    }
+                        boxes[j].checked = false;
+                }
+                boxes[i].checked = true;
+            }
+        }
+    </script>
+</head>
+<body>
+
+<form name="zzjs_net">
+    <div align="center" id="myBox">选框 1
+        <input type="checkBox" name="box">
+        <br>
+        选框 2
+        <input type="checkBox" name="box">
+        <br>
+        选框 3
+        <input type="checkBox" name="box">
+        <br>
+        选框 4
+        <input type="checkBox" name="box">
+        <br>
+        选框 5
+        <input type="checkBox" name="box">
+        <br>
+        选框 6
+        <input type="checkBox" name="box">
+        <br>
+        选框 7
+        <input type="checkBox" name="box">
+        <br>
+        选框 8
+        <input type="checkBox" name="box">
+    </div>
+</form>
+</body>
+</html>
