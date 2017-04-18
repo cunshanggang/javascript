@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>评分结果</title>
+    <style type="text/css">
+        ul{width:208px;height:52px;border:1px solid #66a8cc;margin:0;padding:0;}
+        li{width:50px;height:50px;line-height:50px;border:1px solid #FFFFFF;float:left;list-style:none;text-align:center;background-color:lightgray;}
+        p{display:none;}
+    </style>
+    <script type="text/javascript">
+        var data = ["很差","较差","一般","推荐","力荐"];
+        window.onload = function() {
+            var list = document.getElementById("list");
+            var oLis = document.getElementsByTagName("li");
+            var oP = document.getElementsByTagName("p")[0];//获取第一个p标签
+
+//            alert(oLis.length);
+            //一种方法
+             for(var i = 0;i<oLis.length;i++) {
+                 //增加一个索引号
+                 oLis[i].index = i;
+                 oLis[i].onmouseover = function() {
+
+                 oP.style.display = "block";
+                 oP.innerHTML = data[this.index];
+                     for(var i = 0;i<=this.index;i++) {
+                         //oLis[i].style.backgroundColor = "yellow";//无法获取
+                         oLis[i].style.backgroundColor = "yellow";//改为this
+                     }
+                 };
+
+                 oLis[i].onmouseout = function() {
+                 oP.style.display = "";
+                     for(var i = 0;i<oLis.length;i++) {
+                         oLis[i].style.backgroundColor = "lightgray";
+                     }
+                 }
+             }
+        }
+
+    </script>
+</head>
+<body>
+    <ul id="list">
+        <li>※</li>
+        <li>※</li>
+        <li>※</li>
+        <li>※</li>
+    </ul>
+    <p></p>
+</body>
+</html>
