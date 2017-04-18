@@ -13,6 +13,8 @@
             var oLis = document.getElementsByTagName("li");
 
 //            alert(oLis.length);
+            //一种方法
+            /*
             for(var i = 0;i<oLis.length;i++) {
                 oLis[i].onmouseover = function() {
 //                    oLis[i].style.backgroundColor = "yellow";//无法获取
@@ -22,6 +24,22 @@
                 oLis[i].onmouseout = function() {
                     this.style.backgroundColor = "lightgray";
                 }
+            }
+            */
+
+            //第二种
+            for(var i = 0;i<oLis.length;i++) {
+                (function() {
+                    //鼠标经过
+                    oLis[i].onmouseover = function() {
+                        this.style.backgroundColor = "yellow";
+                    };
+
+                    //鼠标离开
+                    oLis[i].onmouseout = function() {
+                        this.style.backgroundColor = "lightgray";
+                    }
+                })(i);
             }
         }
 
