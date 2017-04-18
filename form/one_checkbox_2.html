@@ -5,15 +5,15 @@
     <meta name="description" content="222" />
     <title>单选的复选框 </title>
     <script>
-        function Box(obj) {
-            //alert(5555);
-            var boxes = document.getElementsByName('box');
-            //alert(boxes);
-            for(var i=0;i<boxes.length;i++) {
-                boxes[i].checked = false;
-            }
-            obj.checked = true;
-        }
+//        function Box(obj) {
+//            //alert(5555);
+//            var boxes = document.getElementsByName('box');
+//            //alert(boxes);
+//            for(var i=0;i<boxes.length;i++) {
+//                boxes[i].checked = false;
+//            }
+//            obj.checked = true;
+//        }
         window.onload = function() {
 
 
@@ -22,7 +22,7 @@
 //            var myBox = document.getElementById("myBox");
             //myBox.onclick = function(e) {
 //                Box(e);
-                //e.checked = true;
+            //e.checked = true;
 //                for(var i=0;i<boxes.length;i++) {
 //                    boxes[i].onclick = function(e) {
 //                       if(e) {
@@ -31,7 +31,15 @@
 //                       e.cheked = true;
 //                    }
 //                }
-           // }
+            // }
+            var myBox = document.getElementById('myBox');
+            var boxes = document.getElementsByName('box');
+            myBox.onclick = function() {
+                for(var i=0;i<boxes.length;i++) {
+                    boxes[i].checked = false;
+                 }
+                obj.checked = true;
+            }
 
         }
     </script>
