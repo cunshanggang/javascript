@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>无缝轮播图片</title>
+    <style type="text/css">
+        .carousel{width:1075px;height:210px;position:relative;margin:0 auto;background:#f00;overflow:hidden;}
+        .carousel ul{height:210px;left:0;top:0;position:absolute;margin:0;padding:0;}
+        li{list-style:none;float:left;width:215px;height:210px;line-height:210px;}
+        .btnLeft,.btnRight{width:50px;height:210px;font-size:24px;background:yellow;display:none;position:absolute;text-align:center;z-index:10;line-height:210px;cursor:pointer;}
+        .btnLeft{left:0;top:0;}
+        .btnRight{right:0;top:0;}
+    </style>
+    <script type="text/javascript">
+        window.onload = function() {
+            var oLi = document.getElementsByTagName("li");
+            var oUl = document.getElementsByTagName("ul")[0];
+            var oDiv = document.getElementsByClassName("carousel")[0];
+            var btn = document.getElementsByTagName("a");
+
+            //复制两份ul，目的是为了实现无缝
+            oUl.innerHTML = oUl.innerHTML+oUl.innerHTML;
+//            alert(oUl);
+            //重新计算ul的长度
+            oUl.style.width =oLi[0].offsetWidth*oLi.length+"px";
+            //设置速度
+            var speed=-1;
+            function move(){
+                //向左移动
+                if(oUl.offsetLeft<-oUl.offsetWidth/2){
+                    oUl.style.left='0';
+
+                }
+                //向右移动
+                else if(oUl.offsetLeft>0){
+                    oUl.style.left=-oUl.offsetWidth/2+'px';
+
+                }
+                //设置ul的left值
+                oUl.style.left=oUl.offsetLeft+speed+'px';
+
+            }
+            var timer=setInterval(move,50);
+            oDiv.onmouseover=function(){
+                clearInterval(timer);
+                btn[0].style.display='block';
+                btn[1].style.display='block';
+
+            };
+            oDiv.onmouseout=function(){
+                clearInterval(timer);
+                timer=setInterval(move,30);
+                btn[0].style.display='none';
+                btn[1].style.display='none';
+            };
+            //改变speed值即可以改变滚动方向
+            btn[0].onclick=function(){
+                speed=-2;
+            };
+            btn[1].onclick=function(){
+                speed=2;
+            }
+        }
+
+    </script>
+</head>
+<body>
+<div class="carousel">
+    <ul>
+        <li><img src="img/light.jpg" alt=""></li>
+        <li><img src="img/mother.jpg" alt=""></li>
+        <li><img src="img/bamboo.jpg" alt=""></li>
+        <li><img src="img/graduate.jpg" alt=""></li>
+        <li><img src="img/orange.jpg" alt=""></li>
+    </ul>
+    <a class="btnLeft"><</a>
+    <a class="btnRight">></a>
+</div>
+</body>
+</html>
