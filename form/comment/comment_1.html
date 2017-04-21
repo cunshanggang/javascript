@@ -37,6 +37,11 @@
                          oLis[i].style.backgroundColor = "lightgray";
                      }
                  }
+
+                 //鼠标点击
+                 oLis[i].onclick = function() {
+                     alert("评分:"+(this.index+1)+"分");
+                 }
              }
         }
 

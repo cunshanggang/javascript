@@ -7,7 +7,7 @@
         ul{margin:25px 0 0 0;padding:0;list-style:none;width:120px;height:20px;position:absolute;background:url('img/star.png') no-repeat 0 -20px;}
         li {width:24px;height:20px;float:left;}
         li a{display:block;width:24px;height:20px;overflow:hidden;text-indent:-9999px;position:absolute;z-index:5;}
-        li a:hover{background:url(img/star.png) no-repeat 0 0;z-index:3;left:0;}
+        li a:hover{background:url(img/star.png) no-repeat 0 0;position:absolute;left:0;}/*加上：z-index:3则出现BUG*/
         li a.one-star{left:0;width:24px;}/*a标签自身的类元素*/
         li a.two-star{width:48px;height:20px;}
         li a.two-star:hover{width:48px;height:20px;}
@@ -35,11 +35,16 @@
                     tips.style.display ="block";
                     tips.style.marginLeft = 24*[this.index]+"px";
                     tips.innerHTML = data[this.index];
-                };//方法加分号；
+                };//方法end加分号；
 
                 //鼠标离开
                 oLis[i].onmouseout = function() {
                     tips.style.display = "none";
+                };
+
+                //鼠标点击评分
+                oLis[i].onclick = function() {
+                    alert("评分:"+(this.index+1));
                 }
             }
         }
