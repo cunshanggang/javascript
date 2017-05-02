@@ -22,14 +22,10 @@
         //alert(v);
         if(v == 'en_us') {
             en.style.display = '';
-            zh.style.display = 'none';
+            zh.style.display = 'none';//访问：javascript/funtion/getURL.html?lang=en_us(参数)
         }
     }
 </script>
-{if $user_info}
-<a class="sn-login main-color" href="user.php" target="_top">{$user_info.username}</a><em>{$lang.welcome_return}！</em>
-<a class="sn-register" href="user.php?act=logout" target="_top">{$lang.user_logout}</a>
-{else}
 <div id='en_us' style="display:none;">
     <em>welcome to our shop</em>
     <a class="sn-login main-color" href="user.php" target="_top">please login!</a>
@@ -42,4 +38,3 @@
     <a class="sn-register" href="register.php" target="_top">免费注册</a>
     <a class="sn-register" href="mobile/login.php" target="_top">微信登陆</a>
 </div>
-{/if}
