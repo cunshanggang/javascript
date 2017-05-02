@@ -1,0 +1,45 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script language="javascript">
+    function GetRequest() {
+        var url = location.search; //获取url中"?"符后的字串
+        var theRequest = new Object();
+        if (url.indexOf("?") != -1) {
+            var str = url.substr(1);
+            strs = str.split("&");
+            for(var i = 0; i < strs.length; i ++) {
+                theRequest[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]);
+            }
+        }
+        return theRequest;
+    }
+    window.onload = function() {
+        var Request = new Object();
+        Request = GetRequest();
+        var zh = document.getElementById('zh_cn');
+        var en = document.getElementById('en_us');
+        var  v;
+        v = Request['lang'];
+        //alert(v);
+        if(v == 'en_us') {
+            en.style.display = '';
+            zh.style.display = 'none';
+        }
+    }
+</script>
+{if $user_info}
+<a class="sn-login main-color" href="user.php" target="_top">{$user_info.username}</a><em>{$lang.welcome_return}！</em>
+<a class="sn-register" href="user.php?act=logout" target="_top">{$lang.user_logout}</a>
+{else}
+<div id='en_us' style="display:none;">
+    <em>welcome to our shop</em>
+    <a class="sn-login main-color" href="user.php" target="_top">please login!</a>
+    <a class="sn-register" href="register.php" target="_top">free regist</a>
+    <a class="sn-register" href="mobile/login.php" target="_top">wechat landing</a>
+</div>
+<div id='zh_cn'>
+    <em>欢迎光临本店!</em>
+    <a class="sn-login main-color" href="user.php" target="_top">请登录</a>
+    <a class="sn-register" href="register.php" target="_top">免费注册</a>
+    <a class="sn-register" href="mobile/login.php" target="_top">微信登陆</a>
+</div>
+{/if}
