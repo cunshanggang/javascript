@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>时间</title>
+    <script type="text/javascript">
+        //获取当前的时间戳
+        var current = new Date();
+//        alert(current);
+        //转换成：2017/5/3
+//        alert(current.toLocaleDateString());
+        //转换成：2017/5/3 下午2:15:22
+//        alert(current.toLocaleString());
+        //转换成时间戳:10位
+//        alert(Math.round(new Date().getTime()/1000).toString());
+
+        //获取当前的日期时间 格式“yyyy-MM-dd HH:MM:SS” 2017-05-03 14:34:38
+        function getNowFormatDate() {
+            var date = new Date();
+            var seperator1 = "-";
+            var seperator2 = ":";
+            var month = date.getMonth() + 1;
+            var strDate = date.getDate();
+            if (month >= 1 && month <= 9) {
+                month = "0" + month;
+            }
+            if (strDate >= 0 && strDate <= 9) {
+                strDate = "0" + strDate;
+            }
+            var currentdate;
+            currentdate = date.getFullYear() + seperator1 + month + seperator1 + strDate
+                    + " " + date.getHours() + seperator2 + date.getMinutes()
+                    + seperator2 + date.getSeconds();
+            return currentdate;
+        }
+
+        var result = getNowFormatDate();
+        alert(result);
+        console.log(result);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
