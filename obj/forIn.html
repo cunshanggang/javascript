@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>json for ind的使用</title>
+    <script type="text/javascript">
+        window.onload = function(){
+            //遍历json数组对象
+            var obj = [
+                {"name":"yaoMing","career":"basketball"},
+                {"name":"liNa","career":"tennis"}
+            ];
+            var arr="";
+            var arr1="";
+
+            for(arr in obj) {
+//                alert(arr+"="+obj[arr].name);
+                for(arr1 in obj[arr]) {
+                    alert(arr1+'='+obj[arr][arr1]);
+                }
+            }
+
+            //json对象
+//            var obj1 = {a:5,b:3,c:98};
+//            var arr3 = '';
+//            for(arr3 in obj1) {
+//                alert(arr3+'='+obj1[arr3]);
+//            }
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
