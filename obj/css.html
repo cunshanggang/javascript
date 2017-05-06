@@ -16,8 +16,12 @@
 //                var oDiv = document.getElementById("container");
 //                alert(oDiv.currentStyle.width);
 
-            }else if (arguments.length == 3) {
+            }else if (arguments.length == 3) {// 3:表示设置.
                 arguments[0].style[arguments[1]] = arguments[2];
+                //原形：oDiv.style.backgroundColor = "";
+                //以参数的形式来加上：[]
+                // arguments[0].style[arguments[1]] = arguments[2];
+                // error : arguments[0].style.arguments[1] = arguments[2]
             }
         }
         window.onload = function() {
