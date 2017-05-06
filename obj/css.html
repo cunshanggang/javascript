@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css方法</title>
+    <style type="text/css">
+        #container{width:400px;height:100px;border:1px solid gray;background-color:greenyellow;}
+    </style>
+    <script type="text/javascript">
+        function Css() {
+//            alert(arguments[0]);
+//            arguments[0].style.arguments[1] = arguments[2];
+            if(arguments.length == 2) {//等于2表示获取
+//                alert(3333333333);
+//                alert(arguments[0].currentStyle[arguments[1]]);
+//                var oDiv = document.getElementById("container");
+//                alert(oDiv.currentStyle.width);
+
+            }else if (arguments.length == 3) {
+                arguments[0].style[arguments[1]] = arguments[2];
+            }
+        }
+        window.onload = function() {
+            var oBtn = document.getElementById("btn");
+
+            oBtn.onclick = function() {
+                var oDiv = document.getElementById("container");
+//                alert("ddddddddddddd");
+//                Css(oDiv,'width');
+//                Css(oDiv,'backgroundColor','gray');
+//                oDiv.style.backgroundColor = "gray";
+                alert(oDiv.currentStyle.width);
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <button id="btn">提交</button>
+    <div id="container">
+
+    </div>
+</body>
+</html>
