@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>创建对象</title>
+    <script type="text/javascript">
+        window.onload = function() {
+            var oBtn = document.getElementById('btn');
+
+            btn.onclick = function() {
+                var oUl = document.getElementById("oUl");
+                var oLi = document.createElement("li");
+                var oTxt = document.getElementById('txt').value;
+                var aLi = oUl.getElementsByTagName('li');
+                oLi.innerHTML = oTxt;
+//                oUl.appendChild(oLi);
+                if(aLi.length == 0) {
+                    oUl.appendChild(oLi);
+                } else {
+                    oUl.insertBefore(oLi,aLi[0]);
+                }
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <input type="text" name="txt" id="txt" value="">
+    <button id="btn">创建</button>
+    <ul id="oUl">
+
+    </ul>
+</body>
+</html>
