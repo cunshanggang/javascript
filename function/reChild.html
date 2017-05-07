@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>removeChild()方法的使用</title>
+    <script type="text/javascript">
+        window.onload = function() {
+            var oA = document.getElementsByTagName('a');
+            var oUl = document.getElementById("oUl");
+            for(var i=0;i<oA.length;i++) {
+                oA[i].onclick = function() {
+                    //父节点：parentNode
+                    oUl.removeChild(this.parentNode);
+                }
+            }
+        }
+    </script>
+
+</head>
+<body>
+<ul id="oUl">
+    <li>姚明<a href="#">删除</a></li>
+    <li>李娜<a href="#">删除</a></li>
+    <li>孙杨<a href="#">删除</a></li>
+</ul>
+</body>
+</html>
