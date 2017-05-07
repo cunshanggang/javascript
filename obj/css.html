@@ -33,7 +33,9 @@
 //                Css(oDiv,'width');
 //                Css(oDiv,'backgroundColor','gray');
 //                oDiv.style.backgroundColor = "gray";
-                alert(oDiv.currentStyle.width);
+                // 经过计算之后的
+//                alert(oDiv.currentStyle.width);// for IE
+                alert(getComputedStyle(oDiv,false).width);// for FF
             }
         }
 

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css方法</title>
+    <style type="text/css">
+        #container{width:400px;height:100px;border:1px solid gray;background-color:greenyellow;}
+    </style>
+    <script type="text/javascript">
+        /*
+        * 在js的函数中的参数可以不是一一对应的
+        * 例如下面的例子
+        * */
+        function getStyle(obj,attr) {
+            if(obj.currentStyle) {
+                //IE
+                return obj.currentStyle[attr];
+            } else {
+                //FF
+                return getComputedStyle(obj,false)[attr];
+            }
+        }
+
+        function css(obj,attr,value) {
+
+            if(arguments.length == 2) {//等于2表示获取
+               return getStyle(obj,attr);
+            }else if (arguments.length == 3) {// 3:表示设置.
+                obj.style[attr] = value;
+            }
+        }
+        window.onload = function() {
+            var oBtn = document.getElementById("btn");
+
+            oBtn.onclick = function() {
+                var oDiv = document.getElementById("container");
+//                alert(css(oDiv,"width"));//获取
+                css(oDiv,"backgroundColor","green");//设置
+
+            }
+        }
+
+    </script>
+</head>
+<body>
+<button id="btn">提交</button>
+<div id="container">
+
+</div>
+</body>
+</html>
