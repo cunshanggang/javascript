@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sort方法的使用</title>
+    <script type="text/javascript">
+        window.onload = function() {
+//            var arr = ['yaoMing','liNa','liuXiang','dingJunHui','langPing','gaoLin'];
+//            //按照字母来排序，注：只认识字符串，不认识数字
+//            arr.sort();
+//            alert(arr);
+
+            //数字排序
+            var arr = [6,3,9,5,7,1,10];
+            //从小到大排序
+//            arr.sort(function(num1,num2){
+//                return num1-num2;
+//            });
+//            alert(arr);
+
+            //从大到小排序
+            arr.sort(function(num1,num2) {
+                return num2-num1;
+            });
+            alert(arr);
+
+
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
