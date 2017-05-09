@@ -7,12 +7,14 @@
         #container{width:300px;height:400px;border:1px solid lightgray;margin:0 auto;}
         #userName,#iphone{display:block;width:280px;height:40px;line-height:40px;margin:0 auto;}
         #slt{display:block;width:280px;height:45px;margin:10px;}
-        #prov,#city{display:inline-block;width:100px;height:40px;line-height:40px;}
+        #prov,#city{display:inline-block;width:100px;height:40px;line-height:40px;padding:8px 0;vertical-align:middle;}
         #prov{margin:0 60px 0 5px;}
         #userName,#iphone{text-align:center;}
         #panel{width:280px;height:20px;margin:10px;}
-        #agreement{margin:0;padding:0;}
+        #agreement{margin:0;padding:0;vertical-align:text-bottom;margin-bottom:-1px;}
+        #agreement{margin:0;padding:0;vertical-align:middle;}
         span{width:220px;height:20px;display:inline-block;font-size:12px;}
+        #btn{width:100px;height:50px;display:block;border:none;background:#794695;margin:0 auto;margin-top:30px;font-size:16px;color:#fff;cursor:pointer;}
     </style>
 </head>
 <body>
@@ -41,7 +43,7 @@
             <span>我已阅读并接受《圣贸通常见问题条款》</span>
         </div>
 
-        <input type="submit" name="apply" value="立即申请">
+        <input type="submit" name="apply" id="btn" value="立即申请">
         </form>
     </div>
 </body>
