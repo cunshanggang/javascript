@@ -7,7 +7,7 @@
         #container{width:300px;height:400px;border:1px solid lightgray;margin:0 auto;}
         #userName,#iphone{display:block;width:280px;height:40px;line-height:40px;margin:0 auto;}
         #slt{display:block;width:280px;height:45px;margin:10px;}
-        #prov,#city{display:inline-block;width:100px;height:40px;line-height:40px;padding:8px 0;vertical-align:middle;}
+        #prov,#city{display:inline-block;width:100px;height:40px;padding:8px 0;vertical-align:middle;}
         #prov{margin:0 60px 0 5px;}
         #userName,#iphone{text-align:center;}
         #panel{width:280px;height:20px;margin:10px;}
@@ -25,6 +25,8 @@
             var city = ["广州","北京市","上海市"];
 
             oProv.onclick = function() {
+                //alert(oProv.style.height);
+                oProv.style.height = "41px";
                 //var opt = document.getElementsByTagName("option");
                 //alert(opt.length);
                 for(var i=0;i<prov.length;i++) {
@@ -32,7 +34,9 @@
                     oOpt.innerHTML = prov[i];
                     oProv.appendChild(oOpt);
                     //opt[0].insertAfter(oOpt);
+//                    oProv.options.add(new Option(prov[i],i));
                 }
+
 
             }
         }
