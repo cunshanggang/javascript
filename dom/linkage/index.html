@@ -15,7 +15,28 @@
         #agreement{margin:0;padding:0;vertical-align:middle;}
         span{width:220px;height:20px;display:inline-block;font-size:12px;}
         #btn{width:100px;height:50px;display:block;border:none;background:#794695;margin:0 auto;margin-top:30px;font-size:16px;color:#fff;cursor:pointer;}
+        p{text-align:center;font-size:16px;font-weight:bold;}
     </style>
+    <script type="text/javascript">
+        window.onload = function() {
+            var oProv = document.getElementById("prov");
+            var oCity = document.getElementById("city");
+            var prov = ["广东","北京","上海","天津","重庆","湖南","湖北"];
+            var city = ["广州","北京市","上海市"];
+
+            oProv.onclick = function() {
+                //var opt = document.getElementsByTagName("option");
+                //alert(opt.length);
+                for(var i=0;i<prov.length;i++) {
+                    var oOpt = document.createElement("option");
+                    oOpt.innerHTML = prov[i];
+                    oProv.appendChild(oOpt);
+                    //opt[0].insertAfter(oOpt);
+                }
+
+            }
+        }
+    </script>
 </head>
 <body>
     <div id="container">
@@ -26,15 +47,12 @@
          <div id="slt">
              <select name="prov" id="prov">
                  <option value="">省/市</option>
-                 <option value="bj">北京</option>
-                 <option value="sh">上海</option>
-                 <option value="tj">天津</option>
+
              </select>
 
              <select name="city" id="city">
                  <option value="">市/地区</option>
-                 <option value="">北京市</option>
-                 <option value="">上海市</option>
+
              </select>
          </div>
         <input type="text" name="iphone" id="iphone" value="" placeholder="填写手机号码，获取免费注册1039公司名额">
