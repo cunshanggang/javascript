@@ -21,23 +21,53 @@
         window.onload = function() {
             var oProv = document.getElementById("prov");
             var oCity = document.getElementById("city");
-            var prov = ["广东","北京","上海","天津","重庆","湖南","湖北"];
-            var city = ["广州","北京市","上海市"];
+            var prov = ["广东","广西","北京","上海","天津","重庆","湖南","湖北"];
+            var city = [
+                    ["广州","深圳","佛山","茂名"],
+                    ["南宁","桂林","梧州","柳州"],
+                    ["东城区","西城区","崇文区","朝阳区"],
+                    ["黄浦区","卢湾区","徐汇区","长宁区"],
+                    ["和平区","河东区","河西区","南开区"],
+                    ["万州区","涪陵区","渝中区","大渡口区"],
+                    ["长沙","湘潭","株洲","岳阳"],
+                    ["武汉","黄石","荆门","黄冈"]
+            ];
 
             oProv.onclick = function() {
+                //oProv.options.length = 1;
                 //alert(oProv.style.height);
-                oProv.style.height = "41px";
+//                oProv.options.remove(0);//删除索引为0的option
+//                oProv.options[0].style.display = 'none';//隐藏第一个option
+                oCity.options.length = 1;
+                oProv.style.height = "41px";//BUG，去掉后发现问题。
                 //var opt = document.getElementsByTagName("option");
                 //alert(opt.length);
                 for(var i=0;i<prov.length;i++) {
                     var oOpt = document.createElement("option");
-                    oOpt.innerHTML = prov[i];
-                    oProv.appendChild(oOpt);
+//                    oOpt.innerHTML = prov[i];
+//                    oProv.appendChild(oOpt);
                     //opt[0].insertAfter(oOpt);
-//                    oProv.options.add(new Option(prov[i],i));
+                    oProv.options.add(new Option(prov[i],i));//也可以用上面注释写的，分开写
                 }
+                oProv.options.length = eval(1+i);
 
-
+                var optLen = eval(1+i);
+//                alert(optLen);
+                //opts[1].selected = 'selected';
+                var opts = document.getElementsByTagName("option");
+                for(var j=1;j<optLen;j++) {
+                    //alert(opts[j].value);
+                    if(opts[j].selected == true) {//注：如果为：opts[j].selected == 'select',则为：false
+//                        alert(j);
+                        //alert(city[opts[j].value].length);
+                        for(var k=0;k<city[opts[j].value].length;k++) {
+                            var newOpt = document.createElement("option");
+                            oCity.options.add(new Option(city[j-1][k],k));
+                        }
+                        oCity.options[1].selected = true;
+                        oCity.options.length = eval(k+1);//限定option的个数
+                    }
+                }
             }
         }
     </script>
