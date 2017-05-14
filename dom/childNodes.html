@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>子节点</title>
+    <script type="text/javascript">
+        window.onload = function() {
+            var oUl = document.getElementById("myUl");
+//            alert(oUl.childNodes[1].nodeType);//节点类型：1：元素节点；
+//            alert(oUl.childNodes[0].nodeType);//节点类型：3：文本节点（包括空格）
+            //给每一个li元素的背景加上红色。兼容火狐和IE
+            for(var i=0;i<oUl.childNodes.length;i++) {
+                if(oUl.childNodes[i].nodeType == 1) {
+                    oUl.childNodes[i].style.background = 'red';
+                }
+
+            }
+        }
+    </script>
+</head>
+<body>
+    <ul id="myUl">
+        <li>姚明</li>
+        <li>李娜</li>
+        <li>孙杨</li>
+    </ul>
+</body>
+</html>

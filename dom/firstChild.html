@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首尾节点</title>
+    <script type="text/javascript">
+        window.onload = function() {
+            var oUl = document.getElementById("myUl");
+//            oUl.firstChild.style.background = 'red';//只能在IE下看到效果
+//            oUl.firstElementChild.style.background = 'red';//只在FF下看到效果
+//            alert(oUl.firstElementChild.nodeType);
+            //尾节点
+//            alert(oUl.firstChild.nodeType);//IE下：1,火狐下：3
+//            alert(oUl.lastChild.nodeType);//IE下：1
+            //FF下
+//            alert(oUl.firstElementChild.nodeType);//1
+//            alert(oUl.lastElementChild.nodeType);//1
+
+            //兄弟节点,IE
+//            alert(oUl.previousSibling.innerText);
+//            alert(oUl.nextSibling.innerText);
+
+            //FF
+//            alert(oUl.previousElementSibling.innerText);
+//            alert(oUl.nextElementSibling.innerText);
+
+            //兼容IE跟火狐
+            if(document.all) {//IE
+                alert(oUl.nextSibling.innerHTML);
+            } else {
+               alert(oUl.nextElementSibling.innerHTML);
+            }
+
+
+        }
+    </script>
+</head>
+<body>
+    <p>兄弟节点（上）</p>
+    <ul id="myUl">
+        <li>姚明</li>
+        <li>李娜</li>
+        <li>孙杨</li>
+    </ul>
+    <p>兄弟节点（下）</p>
+</body>
+</html>
