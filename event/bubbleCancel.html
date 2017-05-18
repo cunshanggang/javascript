@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>取消冒泡</title>
+    <style type="text/css">
+        #container{width:200px;height:100px;border:1px solid #ccc;display:none;}
+    </style>
+    <script type="text/javascript">
+        window.onload = function() {
+            var btn = document.getElementById("btn");
+            var oDiv = document.getElementById("container");
+
+            btn.onclick = function(ev) {
+                var oEvent = ev || event;
+//                oDiv.style.display = "block";
+                var display = oDiv.style.display;
+                if(display == 'none') {
+                    oDiv.style.display = "block";
+                } else {
+                    oDiv.style.display = "none";
+                }
+                oEvent.cancelBubble = true;
+            };
+
+            document.onclick = function() {
+                oDiv.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <button id="btn">个人中心</button>
+    <div id="container">
+
+    </div>
+</body>
+</html>
