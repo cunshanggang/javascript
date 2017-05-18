@@ -12,7 +12,7 @@
             var oDiv = document.getElementById("container");
 
             btn.onclick = function(ev) {
-                var oEvent = ev || event;
+                var oEvent = ev || event;//兼容火狐与IE
 //                oDiv.style.display = "block";
                 var display = oDiv.style.display;
                 if(display == 'none') {
