@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>拖拽Div解决拖拽不拖出可视区的BUG</title>
+    <style type="text/css">
+        #container{width:100px;height:100px;border:1px solid #ccc;background:#f9dd34;position:absolute;}
+    </style>
+    <script type="text/javascript">
+        window.onload = function() {
+            var oDiv = document.getElementById("container");
+            // 1.先保存鼠标按下的时候的距离
+            oDiv.onmousedown = function(ev) {
+                var oEvent = ev || event;
+                //保存鼠标与div边界的横坐标
+                var disX = oEvent.clientX - oDiv.offsetLeft;
+                //保存鼠标与div边界的纵坐标
+                var disY = oEvent.clientY - oDiv.offsetTop;
+
+                // 2.鼠标移动时候的距离
+                document.onmousemove = function(ev) {
+                    var oEvent = ev || event;
+                    var l = oEvent.clientX - disX;
+                    var t = oEvent.clientY - disY;
+                    //判断左边是否超出可视区
+                    if(l<0) {
+                       l = 0;
+                    }else if(l>(oEvent.clientX-oDiv.offsetWidth)) {//判断右边是否超出可视区
+                        l = oEvent.clientX-oDiv.offsetWidth;
+//                        l = document.documentElement.clientWidth - oDiv.offsetWidth;
+                    }
+                    //div的移动距离等于：鼠标位置距离减去鼠标与div的距离
+                    oDiv.style.left = l+'px';
+                    oDiv.style.top = t+'px';
+                };
+
+                // 3.鼠标提起来离开的时候
+                document.onmouseup = function() {
+                    //将鼠标onmousemove事件停止
+                    document.onmousemove = null;
+                    //顺便将onmouseup事件也停止
+                    document.onmouseup = null;
+                };
+                //基本完成拖拽的功能，但在火狐下3.6.2有BUG，
+                //火狐下div为空时拖拽效果失效
+                //解决办法：直接加 return false
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="container">
+
+</div>
+</body>
+</html>
