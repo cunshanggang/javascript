@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>拖拽</title>
+    <style type="text/css">
+        *{margin:0;padding:0;}
+        li{list-style:none;}
+        #login{width:150px;height:100px;border:1px solid #ccc;background:#f9dd34;position:absolute;display:none;}
+    </style>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.oncontextmenu = function(ev) {
+                var oUl = document.getElementById("login");
+                oUl.style.display = 'block';
+                var oEvent = ev || event;//兼容火狐和IE
+//                alert(e.clientX);//鼠标的横坐标
+//                alert(e.clientY);//鼠标的纵坐标
+                var x = oEvent.clientX;
+                var y = oEvent.clientY;
+
+                    oUl.style.left = x+"px";
+                    oUl.style.top = y+"px";
+
+                return false;//阻止默认行为，鼠标右击出菜单
+            },
+
+            //鼠标点击消失
+            document.onclick = function() {
+                var oUl = document.getElementById("login");
+                oUl.style.display = 'none';
+            }
+        }
+    </script>
+</head>
+<body>
+    <ul id="login">
+        <li><a href="#">个人中心</a></li>
+        <li><a href="#">账户设置</a></li>
+        <li><a href="#">意见反馈</a></li>
+        <li><a href="#">退出</a></li>
+    </ul>
+</body>
+</html>
