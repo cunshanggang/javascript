@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9077dd33-9a55-4805-b4fb-1e80ddfd40e4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/form/option.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/form/option_index_value.html" />
+    <list default="true" id="9077dd33-9a55-4805-b4fb-1e80ddfd40e4" name="Default" comment="sql: add China's province,city,region detail address.">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/index.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/event/timeObj.html" afterPath="$PROJECT_DIR$/event/timeObj.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/form/active.html" afterPath="$PROJECT_DIR$/form/active.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/nodeInsert.html" afterPath="$PROJECT_DIR$/node/nodeInsert.html" />
     </list>
+    <list id="829b8df2-88fe-4c6f-821d-d2ba0b546765" name="New changelist" comment="" />
     <ignored path="javascript.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -30,31 +27,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="verify.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/form/verify.html">
+      <file leaf-file-name="conJoin.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/array/conJoin.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="35" column="7" selection-start-line="35" selection-start-column="7" selection-end-line="35" selection-end-column="7" />
+            <state relative-caret-position="220">
+              <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="option.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/form/option.html">
+      <file leaf-file-name="drag2.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/event/drag2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="662">
-              <caret line="37" column="7" selection-start-line="5" selection-start-column="0" selection-end-line="37" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="option_index_value.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/form/option_index_value.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+            <state relative-caret-position="67">
+              <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -66,6 +53,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -78,6 +66,27 @@
         <option value="$PROJECT_DIR$/form/verify.html" />
         <option value="$PROJECT_DIR$/form/option.html" />
         <option value="$PROJECT_DIR$/form/option_index_value.html" />
+        <option value="$PROJECT_DIR$/form/checkbox.html" />
+        <option value="$PROJECT_DIR$/form/one_checkbox_1.html" />
+        <option value="$PROJECT_DIR$/form/one_checkbox_2.html" />
+        <option value="$PROJECT_DIR$/form/one_checkbox.html" />
+        <option value="$PROJECT_DIR$/form/comment.html" />
+        <option value="$PROJECT_DIR$/form/comment_1.html" />
+        <option value="$PROJECT_DIR$/form/comment/comment_2.html" />
+        <option value="$PROJECT_DIR$/form/carousel/seamless.html" />
+        <option value="$PROJECT_DIR$/form/carousel/seamless_1.html" />
+        <option value="$PROJECT_DIR$/form/comment/comment_1.html" />
+        <option value="$PROJECT_DIR$/form/comment/test.html" />
+        <option value="$PROJECT_DIR$/vaildate/index.html" />
+        <option value="$PROJECT_DIR$/validate/index.html" />
+        <option value="$PROJECT_DIR$/funtion/getURL.html" />
+        <option value="$PROJECT_DIR$/time/getTime.html" />
+        <option value="$PROJECT_DIR$/obj/css.html" />
+        <option value="$PROJECT_DIR$/dom/linkage/jsAddress.js" />
+        <option value="$PROJECT_DIR$/dom/linkage/test.html" />
+        <option value="$PROJECT_DIR$/dom/linkage/index.html" />
+        <option value="$PROJECT_DIR$/dom/linkage/ecs_region.sql" />
+        <option value="$PROJECT_DIR$/event/drag2.html" />
       </list>
     </option>
   </component>
@@ -118,6 +127,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -136,38 +146,9 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascript" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascript" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="form" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascript" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascript" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="event" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -176,8 +157,25 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="js-jscs-nodeInterpreter" value="D:\Softwares\Node.js\node.exe" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\csg\javascript\dom\linkage" />
+      <recent name="C:\Users\Administrator\Desktop\csg\javascript\ajax" />
+      <recent name="C:\Users\Administrator\Desktop\csg\javascript\vaildate\js" />
+      <recent name="C:\Users\Administrator\Desktop\csg\javascript\form\carousel\img" />
+      <recent name="C:\Users\Administrator\Desktop\csg\javascript\form\comment\img" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\csg\javascript\form\comment" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.getURL.html">
+    <configuration default="false" name="getURL.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/javascript/funtion/getURL.html">
+      <method />
+    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <method />
     </configuration>
@@ -203,6 +201,12 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -225,6 +229,14 @@
       <recursive>false</recursive>
       <method />
     </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.getURL.html" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.getURL.html" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -232,6 +244,7 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="9077dd33-9a55-4805-b4fb-1e80ddfd40e4" name="Default" comment="" />
+      <changelist id="829b8df2-88fe-4c6f-821d-d2ba0b546765" name="New changelist" comment="" />
       <created>1479483303090</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -239,24 +252,209 @@
       <workItem from="1479483304681" duration="11000" />
       <workItem from="1479517014734" duration="3000" />
       <workItem from="1486170888805" duration="2853000" />
-      <workItem from="1492246540300" duration="2157000" />
+      <workItem from="1492246540300" duration="2538000" />
+      <workItem from="1492313423786" duration="7064000" />
+      <workItem from="1492392875962" duration="13048000" />
+      <workItem from="1492478901643" duration="24038000" />
+      <workItem from="1492565537892" duration="20971000" />
+      <workItem from="1492652629900" duration="796000" />
+      <workItem from="1492657848102" duration="10089000" />
+      <workItem from="1492738746417" duration="10430000" />
+      <workItem from="1493691160954" duration="1909000" />
+      <workItem from="1493791874248" duration="1568000" />
+      <workItem from="1493861788651" duration="808000" />
+      <workItem from="1494032154761" duration="2925000" />
+      <workItem from="1494053853556" duration="10444000" />
+      <workItem from="1494206109016" duration="120000" />
+      <workItem from="1494208141050" duration="7672000" />
+      <workItem from="1494292154166" duration="3244000" />
+      <workItem from="1494378576635" duration="1707000" />
+      <workItem from="1494399860627" duration="6155000" />
+      <workItem from="1494464154754" duration="10382000" />
+      <workItem from="1494926545349" duration="1439000" />
+      <workItem from="1495155799154" duration="898000" />
+      <workItem from="1495589023257" duration="276000" />
+      <workItem from="1495593705142" duration="2445000" />
     </task>
+    <task id="LOCAL-00001" summary="How to monitor the actions of options.">
+      <created>1492248876935</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1492248876935</updated>
+    </task>
+    <task id="LOCAL-00002" summary="How to deal with checkbox.">
+      <created>1492479329029</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1492479329029</updated>
+    </task>
+    <task id="LOCAL-00003" summary="solve the problem that checkbox be selected only one option.">
+      <created>1492497789534</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1492497789534</updated>
+    </task>
+    <task id="LOCAL-00004" summary="How to do a score effect.">
+      <created>1492508795533</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1492508795533</updated>
+    </task>
+    <task id="LOCAL-00005" summary="How to do a score effect with another way.">
+      <created>1492509446625</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1492509446625</updated>
+    </task>
+    <task id="LOCAL-00006" summary="finished the comment function.">
+      <created>1492516573912</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1492516573912</updated>
+    </task>
+    <task id="LOCAL-00007" summary="do a comment function by myself.">
+      <created>1492591628847</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1492591628847</updated>
+    </task>
+    <task id="LOCAL-00008" summary="seamless carousel.">
+      <created>1492652674528</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1492652674528</updated>
+    </task>
+    <task id="LOCAL-00009" summary="finished the function of seamless carousel.">
+      <created>1492670911644</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1492670911644</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Comment function add onclick function.">
+      <created>1492743942576</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1492743942576</updated>
+    </task>
+    <task id="LOCAL-00011" summary="How to use validate plugin.">
+      <created>1492762013754</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1492762013754</updated>
+    </task>
+    <task id="LOCAL-00012" summary="How to get the URL parameter.">
+      <created>1493691666141</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1493691666141</updated>
+    </task>
+    <task id="LOCAL-00013" summary="More detail.">
+      <created>1493692597979</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1493692597979</updated>
+    </task>
+    <task id="LOCAL-00014" summary="&quot;funtion&quot; modified &quot;function&quot;.">
+      <created>1493692697231</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1493692697231</updated>
+    </task>
+    <task id="LOCAL-00015" summary="js timestamp.">
+      <created>1493793397937</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1493793397937</updated>
+    </task>
+    <task id="LOCAL-00016" summary="How to use ajax.">
+      <created>1493862132993</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1493862132993</updated>
+    </task>
+    <task id="LOCAL-00017" summary="js arguments -&gt; css() function.">
+      <created>1494062811242</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1494062811242</updated>
+    </task>
+    <task id="LOCAL-00018" summary="add comment.">
+      <created>1494063478823</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1494063478823</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Province and city linkage.">
+      <created>1494223908928</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1494223908928</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Finished style.">
+      <created>1494295093751</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1494295093751</updated>
+    </task>
+    <task id="LOCAL-00021" summary="find a test.">
+      <created>1494405689809</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1494405689809</updated>
+    </task>
+    <task id="LOCAL-00022" summary="finished but had a bug.">
+      <created>1494473634853</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1494473634853</updated>
+    </task>
+    <task id="LOCAL-00023" summary="sql: add China's province,city,region detail address.">
+      <created>1494926945794</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1494926945794</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5024000" />
+    <option name="totallyTimeSpent" value="143833000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="0" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.249375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15716097" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.50253487" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.8425303" sideWeight="0.49746513" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -267,6 +465,24 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -279,47 +495,389 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="How to monitor the actions of options." />
+    <MESSAGE value="How to deal with checkbox." />
+    <MESSAGE value="solve the problem that checkbox be selected only one option." />
+    <MESSAGE value="How to do a score effect." />
+    <MESSAGE value="How to do a score effect with another way." />
+    <MESSAGE value="finished the comment function." />
+    <MESSAGE value="do a comment function by myself." />
+    <MESSAGE value="seamless carousel." />
+    <MESSAGE value="finished the function of seamless carousel." />
+    <MESSAGE value="Comment function add onclick function." />
+    <MESSAGE value="How to use validate plugin." />
+    <MESSAGE value="How to get the URL parameter." />
+    <MESSAGE value="More detail." />
+    <MESSAGE value="&quot;funtion&quot; modified &quot;function&quot;." />
+    <MESSAGE value="js timestamp." />
+    <MESSAGE value="How to use ajax." />
+    <MESSAGE value="js arguments -&gt; css() function." />
+    <MESSAGE value="add comment." />
+    <MESSAGE value="Province and city linkage." />
+    <MESSAGE value="Finished style." />
+    <MESSAGE value="find a test." />
+    <MESSAGE value="finished but had a bug." />
+    <MESSAGE value="sql: add China's province,city,region detail address." />
+    <option name="LAST_COMMIT_MESSAGE" value="sql: add China's province,city,region detail address." />
+    <option name="PRESELECT_EXISTING_CHANGELIST" value="false" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/form/verify.html">
+    <entry file="file://$PROJECT_DIR$/form/2.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/form/verify.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="35" column="7" selection-start-line="35" selection-start-column="7" selection-end-line="35" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/form/option.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="662">
-          <caret line="37" column="7" selection-start-line="5" selection-start-column="0" selection-end-line="37" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/event/message‘.html">
+    <entry file="file://$PROJECT_DIR$/form/action.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/form/checkbox.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/form/active.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/form/select.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/form/one_checkbox.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="924">
+          <caret line="42" column="11" selection-start-line="42" selection-start-column="11" selection-end-line="42" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/form/comment/img/icon.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/closure/reduce.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/form/comment/img/star.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/form/one_checkbox_1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="27" column="17" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/form/select1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/form/carousel/seamless.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/form/one_checkbox_2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="485">
+          <caret line="73" column="10" selection-start-line="73" selection-start-column="10" selection-end-line="73" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/form/comment/comment_2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1000">
+          <caret line="140" column="7" selection-start-line="140" selection-start-column="7" selection-end-line="140" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/form/carousel/seamless_1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="965">
+          <caret line="78" column="7" selection-start-line="78" selection-start-column="7" selection-end-line="78" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/form/comment/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="108" selection-start-line="9" selection-start-column="108" selection-end-line="9" selection-end-column="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/form/comment/comment_1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="42" column="50" selection-start-line="42" selection-start-column="50" selection-end-line="42" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/form/comment/comment.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="37" column="26" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/obj.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js_addEvent.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/validate/js/jquery-3.2.1.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/validate/js/jquery.validate.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/validate/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-176">
+          <caret line="64" column="27" selection-start-line="64" selection-start-column="27" selection-end-line="64" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/function/getURL.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="24" column="58" selection-start-line="24" selection-start-column="58" selection-end-line="24" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/open/open.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/open/26.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/date.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/obj.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-198">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/ajax.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setTimeout/location1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/eval/escape.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/eval/eval.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/readTxt.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/read.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/obj/forIn.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="682">
+          <caret line="31" column="6" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/time/getTime.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="638">
+          <caret line="29" column="28" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/date.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/obj/css.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/array/createArr.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/array/manArr.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/array/sort.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/array/splice.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/array/arr2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-43">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dom/linkage/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dom/linkage/ecs_region.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10516">
+          <caret line="820" column="63" selection-start-line="820" selection-start-column="63" selection-end-line="820" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dom/linkage/jsAddress.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2266">
+          <caret line="166" column="15" selection-start-line="166" selection-start-column="15" selection-end-line="166" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dom/linkage/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="990">
+          <caret line="45" column="63" selection-start-line="45" selection-start-column="63" selection-end-line="45" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dom/creEle.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/array/conJoin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/form/option_index_value.html">
+    <entry file="file://$PROJECT_DIR$/event/drag2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        <state relative-caret-position="67">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
           <folding />
         </state>
       </provider>
