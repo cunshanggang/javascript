@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js cookie的使用</title>
+    <script type="text/javascript">
+        window.onload = function() {
+            //新建一个cookie，并且只能在火狐浏览器下看到cookie的值
+//            document.cookie="username=admin";//第一个
+//            document.cookie="password=123456";//第二个不会覆盖第一个
+
+            var oDate = new Date();
+//            alert(oDate.getFullYear()+'-'+(oDate.getMonth()+1)+'-'+oDate.getDate());//时间格式：2017-05-25
+            //设定时间
+//            alert(oDate.getDate());
+            oDate.setDate(oDate.getDate()+1);//设定的时间是25+1，即明天
+
+            //设定cookie并设定cookie保存的时间
+//            document.cookie = "username=admin;expires="+oDate;
+
+            //将创建cookie封装成一个方法
+            function setCookie(name,value,iDay) {
+                var oDate = new Date();
+                oDate.setDate(oDate.getDate()+iDay);
+                document.cookie = name+'='+value+';expires='+oDate;
+            }
+
+//            setCookie('username','yaoMing',1);//success
+            setCookie('password',123456,1);
+
+            //获取cookie的值
+            //cookie的格式：username=yaoMing; password=123456 ; + 空格
+            function getCookie(name) {
+                var arr = document.cookie.split("; ");
+                for(var i=0;i<arr.length;i++) {
+                    var arr2 = arr[i].split("=");
+                    if(arr2[0] == name) {
+                        return arr2[1];
+                    }
+                }
+                return "No this name!";
+            }
+//            alert(getCookie('4545'));//success
+
+            //删除cookie值
+            function removeCookie(name) {
+                setCookie(name,'1',-1);
+            }
+
+            alert(getCookie("username"));
+            removeCookie("username");
+            alert(getCookie("username"));
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
