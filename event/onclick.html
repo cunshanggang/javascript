@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> new document </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <script type="text/javascript">
+
+        function rem(rec)
+        {
+            var x = rec.parentNode.parentNode;
+            var y = document.getElementById("table");
+            //document.write(y.lastChild.nodename);
+            y.removeChild(x);
+        }
+
+
+        var num = 2;
+        function add(){
+            var input = document.getElementsByTagName("input")[0];
+            var tab = document.getElementById("table");
+            var tr = document.createElement("tr");
+            var td1 = document.createElement("td");
+            var td2 = document.createElement("td");
+            var td3 = document.createElement("td");
+            num++;
+            td1.innerHTML = "xh00"+ num;
+            td2.innerHTML = "第"+num+"个同学";
+            td3.innerHTML = '<a href="javascript:;" onclick = "rem(this)">删除</a>' ;
+            tr.appendChild(td1);
+            tr.appendChild(td2);
+            tr.appendChild(td3);
+            tab.appendChild(tr);
+        }
+
+    </script>
+</head>
+<body>
+<table border="1" width="50%" id="table">
+    <tr>
+        <th>学号</th>
+        <th>姓名</th>
+        <th>操作</th>
+    </tr>
+
+    <tr>
+        <td>xh001</td>
+        <td>王小明</td>
+        <td><a href="javascript:;" onclick = "remove(this)">删除</a></td>   <!--在删除按钮上添加点击事件  -->
+    </tr>
+
+    <tr>
+        <td>xh002</td>
+        <td>刘小芳</td>
+        <td><a href="javascript:;" onclick = "remove(this)">删除</a></td>   <!--在删除按钮上添加点击事件  -->
+    </tr>
+
+</table>
+<input type="button" value="添加一行" onclick="add()"/>   <!--在添加按钮上添加点击事件  -->
+</body>
+</html>
